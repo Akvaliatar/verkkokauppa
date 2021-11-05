@@ -1,4 +1,9 @@
 import './App.css'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App () {
   return (
@@ -21,11 +26,13 @@ function App () {
 
       <div>
         <p>kaiken mailman sisältöä</p>
+        <Button>testi button</Button>
       </div>
 
       <footer>
-        <div>
-            <div>
+        <Container>
+          <Row md={4}>
+            <Col>
               <p>Seuraa meitä</p>
               <figure>
                 <img scr='' alt=''></img>
@@ -35,18 +42,17 @@ function App () {
               <a href=''>rekisteriseloste</a>
               <a href=''>toimitusehdot</a>
               <a href=''>yhteystiedot</a>
-            </div>
-            <div>
+            </Col>
+            <Col>
               <p>Lataa sovellus</p>
-            </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </footer>
     </div>
-
-    
   )
 }
 
-
 export default App
+
 
