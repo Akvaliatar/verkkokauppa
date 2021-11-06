@@ -9,12 +9,19 @@ function App () {
   return (
     <div>
       <header>
-        <div>
-          <a href=''>FI</a>|<a href=''>EN</a>
-          <figure>
-            <img scr='./logo.jpeg' alt='logo'></img>
-          </figure>
-        </div>
+        <Row>
+          <Col>
+            <a href=''>FI</a>|<a href=''>EN</a>
+          </Col>
+          <Col>
+            <figure>
+              <img scr={'./logo.png'} alt='logo' />
+            </figure>
+          </Col>
+          <Col>
+            <p>ostoskori icon</p>
+          </Col>
+        </Row>
         <div>
           <a href=''>Koti</a>
           <a href=''>Meistä</a>
@@ -31,20 +38,30 @@ function App () {
 
       <footer>
         <Container>
-          <Row md={4}>
+          <Row>
             <Col>
-              <p>Seuraa meitä</p>
+              <h3>Seuraa meitä</h3>
               <figure>
-                <img scr='' alt=''></img>
-                <img scr='' alt=''></img>
+                <img scr='' alt='Instagram'></img>
+                <img scr='' alt='Facebook/Meta'></img>
               </figure>
-              <a href=''>evästeet</a>
-              <a href=''>rekisteriseloste</a>
-              <a href=''>toimitusehdot</a>
-              <a href=''>yhteystiedot</a>
+              <ul className='footer_ul'>
+                <li>
+                  <a href=''>evästeet</a>
+                </li>
+                <li>
+                  <a href=''>rekisteriseloste</a>
+                </li>
+                <li>
+                  <a href=''>toimitusehdot</a>
+                </li>
+                <li>
+                  <a href=''>yhteystiedot</a>
+                </li>
+              </ul>
             </Col>
             <Col>
-              <p>Lataa sovellus</p>
+              <h3>Lataa sovellus</h3>
             </Col>
           </Row>
         </Container>
@@ -54,5 +71,3 @@ function App () {
 }
 
 export default App
-
-

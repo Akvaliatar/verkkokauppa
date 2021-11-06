@@ -2,15 +2,10 @@ header {
   background-color: #A8AE8A;
 }
 
-
-
-
-
-
-
-
-
-
 footer {
   background-color: #A8AE8A;
+}
+
+.footer_ul {
+  list-style-type: none;
 }
