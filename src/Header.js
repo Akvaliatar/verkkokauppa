@@ -1,4 +1,5 @@
 import React from "react"
+import './header.css'
 import { Link } from "react-router-dom"
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -7,8 +8,10 @@ export default function Header() {
     return (
         <header>
         <Row>
-          <Col>
-            <a href=''>FI</a>|<a href=''>EN</a>
+          <Col className="kieli">
+            <a href='' className="FI">FI</a>
+            <a>|</a>
+            <a href='' className="EN">EN</a>
           </Col>
           <Col>
             <figure>

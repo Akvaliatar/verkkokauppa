@@ -1,7 +1,22 @@
-header {
-  background-color: #A8AE8A;
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+/*Komponentteja tehdessä kannattaa muistaa käyttää näitä!*/
+h1 {
+  font-family: 'DM Serif Display', serif;
+  color: #514B3B;
+  text-align: center;
+  width: 100%;
+}
+h2 {
+  font-family: 'Open Sans', sans-serif;
+}
+p {
+  color: #514B3B;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  width: 100%;
+}
 footer {
   background-color: #A8AE8A;
 }
