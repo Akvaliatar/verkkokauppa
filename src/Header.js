@@ -24,13 +24,6 @@ export default function Header() {
            <p><BsCart4/></p>
           </Col>
         </Row>
-        <div>
-          <a href='/'>Koti</a>
-          <a href='/aboutus'>Meistä</a>
-          <a href='/services'>Palvelut</a>
-          <a href='/Shop'>Verkkokauppa</a>
-          <a href='/about'>Omat tiedot</a>
-        </div>
       </header>
     )
 }
