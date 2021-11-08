@@ -41,3 +41,21 @@ footer a:hover{
 .footer_ul {
   list-style-type: none;
 }
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 30px;
+  background: #A8AE8A;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 5px 10px #ccc;
+
+}
+
+.back-to-top:hover {
+  background: #514B3B;
+}
