@@ -2,6 +2,11 @@ header {
     background-color: #A8AE8A;
   }
 /*Kielinapin muotoilu, vasen yläkulma isolla näytöllä, mobiilissa ja tabletilla hampurilaisessa.*/
+img {
+ width: 6em; 
+ height: 6em;
+}
+
 .kieli a{
     text-decoration: none;
     color: #514B3B;

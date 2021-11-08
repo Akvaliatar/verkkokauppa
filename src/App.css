@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 /*Komponentteja tehdessä kannattaa muistaa käyttää näitä!*/
+
+
 h1 {
   font-family: 'DM Serif Display', serif;
   color: #514B3B;
@@ -19,6 +21,21 @@ p {
 }
 footer {
   background-color: #A8AE8A;
+}
+
+footer p {
+  text-align: start;
+}
+
+footer a{
+  text-decoration: none;
+  color: #514B3B;
+  margin-top: 1em;
+}
+
+footer a:hover{
+  text-decoration: none;
+  color: #948f84;
 }
 
 .footer_ul {
