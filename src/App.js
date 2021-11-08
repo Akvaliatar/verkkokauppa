@@ -8,12 +8,15 @@ import Shop from "./Shop"
 import About from "./About"
 import NotFound from "./NotFound"
 import Header from "./Header"
+import Navbar from "./Navbar"
 import Footer from "./Footer"
 
 function App () {
   return (
     <>
+    
     <Header />
+    <Navbar />
     <div>
     <Switch>
       <Route path="/" component={Home} exact />
