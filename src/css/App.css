@@ -12,12 +12,16 @@ h1 {
 }
 h2 {
   font-family: 'Open Sans', sans-serif;
+  color: #514B3B;
+  text-align: center;
+  width: 100%;
 }
 p {
   color: #514B3B;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   width: 100%;
+  padding: 15px;
 }
 footer {
   background-color: #A8AE8A;
@@ -58,4 +62,8 @@ footer a:hover{
 
 .back-to-top:hover {
   background: #514B3B;
+}
+
+.picture {
+  text-align: center;
 }
