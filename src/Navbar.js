@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 
-
 export default function NavBar () {
   return (
     <Navbar bg='light' expand='lg'>
@@ -12,17 +11,16 @@ export default function NavBar () {
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='me-auto'>
             <Nav.Link href='/'>Home</Nav.Link>
-            <Nav.Link href="/aboutus">Meistä</Nav.Link>
-            <Nav.Link href="/services">Palvelut</Nav.Link>
-            <Nav.Link href="/shop">Verkkokauppa</Nav.Link>
-            <Nav.Link href="/about">Omat tiedot</Nav.Link>
+            <Nav.Link href='/aboutus'>Meistä</Nav.Link>
+            <Nav.Link href='/services'>Palvelut</Nav.Link>
+            <Nav.Link href='/shop'>Verkkokauppa</Nav.Link>
+            <Nav.Link href='/about'>Omat tiedot</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   )
 }
-
 
 
 

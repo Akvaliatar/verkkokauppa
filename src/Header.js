@@ -1,8 +1,9 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React from 'react'
+import { Link } from 'react-router-dom'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { BsCart4 } from 'react-icons/bs';
+import Logo from './logo.jpg'
 
 export default function Header () {
   return (
@@ -13,14 +14,13 @@ export default function Header () {
         </Col>
         <Col>
           <figure>
-            <img scr={'./logo.png'} alt='logo' />
+            <img alt='logo image' />
           </figure>
         </Col>
         <Col>
           <p><BsCart4/></p>
         </Col>
       </Row>
-      
     </header>
   )
 }
