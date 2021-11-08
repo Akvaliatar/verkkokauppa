@@ -1,10 +1,10 @@
 import React from "react"
-import './header.css'
+import '../css/header.css'
 import { Link } from "react-router-dom"
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { BsCart4 } from 'react-icons/bs';
-import Logo from './logo.png'
+import Logo from '../img/logo.png'
 
 export default function Header() {
     return (

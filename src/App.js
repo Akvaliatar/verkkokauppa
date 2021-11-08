@@ -1,15 +1,15 @@
 import React from 'react'
-import './App.css'
+import './css/App.css'
 import { Switch, Route} from "react-router-dom"
-import Home from "./Home"
-import AboutUs from "./AboutUs"
-import Services from "./Services"
-import Shop from "./Shop"
-import About from "./About"
-import NotFound from "./NotFound"
-import Header from "./Header"
-import Navbar from "./Navbar"
-import Footer from "./Footer"
+import Home from "./js/Home"
+import AboutUs from "./js/AboutUs"
+import Services from "./js/Services"
+import Shop from "./js/Shop"
+import About from "./js/About"
+import NotFound from "./js/NotFound"
+import Header from "./js/Header"
+import Navbar from "./js/Navbar"
+import Footer from "./js/Footer"
 
 function App () {
   return (
