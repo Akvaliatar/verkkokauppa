@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { BsCart4 } from 'react-icons/bs';
-import Logo from './logo.jpg'
+import Logo from './logo.png'
 
 export default function Header() {
     return (
