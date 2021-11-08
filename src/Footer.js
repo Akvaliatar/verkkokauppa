@@ -10,11 +10,6 @@ export default function Footer () {
       <Container>
         <Row>
           <Col>
-            <h3>Seuraa meitä</h3>
-            <figure>
-              <img scr='' alt='Instagram'></img>
-              <img scr='' alt='Facebook'></img>
-            </figure>
             <ul className='footer_ul'>
               <li>
                 <a href=''>evästeet</a>
@@ -29,6 +24,10 @@ export default function Footer () {
                 <a href=''>yhteystiedot</a>
               </li>
             </ul>
+          </Col>
+          <Col>
+          <h3>Seuraa meitä</h3>
+            <p><SiInstagram />     <SiFacebook /></p>
           </Col>
           <Col>
             <h3>Lataa sovellus</h3>
