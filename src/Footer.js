@@ -2,6 +2,7 @@ import React from "react"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { SiFacebook, SiInstagram, SiGoogleplay, SiApple } from "react-icons/si";
 
 export default function Footer() {
     return (
@@ -13,6 +14,8 @@ export default function Footer() {
               <figure>
                 <img scr='' alt='Instagram'></img>
                 <img scr='' alt='Facebook/Meta'></img>
+                <p> <SiFacebook /></p>
+                <p> <SiInstagram /> </p>
               </figure>
               <ul className='footer_ul'>
                 <li>
@@ -31,6 +34,10 @@ export default function Footer() {
             </Col>
             <Col>
               <h3>Lataa sovellus</h3>
+              <ul className="footer_ul">
+                <li><SiGoogleplay /></li>
+                <li><SiApple /></li>
+              </ul>
             </Col>
           </Row>
         </Container>
