@@ -17,11 +17,11 @@ export default function Header() {
           </Col>
           <Col>
             <figure>
-              <img scr={'./logo.png'} alt='logo' />
+              <img src={Logo} />
             </figure>
           </Col>
           <Col>
-            <p>ostoskori icon</p>
+           <p><BsCart4/></p>
           </Col>
         </Row>
         <div>
@@ -34,22 +34,4 @@ export default function Header() {
       </header>
     )
 }
-export default function Header () {
-  return (
-    <header>
-      <Row>
-        <Col>
-          <a href=''>FI</a>|<a href=''>EN</a>
-        </Col>
-        <Col>
-          <figure>
-            <img src={Logo} />
-          </figure>
-        </Col>
-        <Col>
-          <p><BsCart4/></p>
-        </Col>
-      </Row>
-    </header>
-  )
-}
+
