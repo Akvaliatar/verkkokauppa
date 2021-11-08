@@ -14,7 +14,7 @@ export default function Header () {
         </Col>
         <Col>
           <figure>
-            <img alt='logo image' />
+            <img src={Logo} />
           </figure>
         </Col>
         <Col>
