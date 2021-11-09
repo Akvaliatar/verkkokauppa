@@ -29,8 +29,7 @@ export default function Services () {
         katsomassa verkkokauppamme sisältöä ja tarjottavia palveluita
       </p>
 
-      <h2>Opastetut kierrokset</h2>
-
+      <h3>Opastetut kierrokset</h3>
       <p>
         Tarjoamme opastettuja kierroksia missä tutustumme puiston tiloihin ja eläimiin. 
         Pääset tapaamaan tilalla asuvia eläimiä. Kerromme tietoa tilan asukkaista ja heidän
@@ -39,8 +38,7 @@ export default function Services () {
         kierrosten ryhmäkoko on 10-30 henkeä. 
       </p>
 
-      <h2>Terapiatoiminta</h2>
-
+      <h3>Terapiatoiminta</h3>
       <p>
         Tarjoamme erilaisia eläinpohjaista terapian muotoja asiakkaille. Terapia toteutetaan osaavien
          ohjaajien avulla ja terapiassa hyödynnetään kotieläinpuiston eläimiä. Terapia tapahtuu joko 
@@ -48,16 +46,14 @@ export default function Services () {
          ja toimintaterapia, missä hoidamme ryhmässä tilan eläimiä. 
       </p>
 
-      <h2>Kummitoiminta </h2>
-
+      <h3>Kummitoiminta</h3>
       <p>
         Kiinnostaisiko ryhtyä eläimelle kummiksi? Meillä on  siihen mahdollisuus. Pääset valitsemaan 
         tilan  asukkaista “oman” eläimen, jota pääset hoitamaan ja tapaamaan etukäteen sovittuina 
         tapaamisilla. Jos kiinnostuit ota rohkeasti yhteyttä meihin joko soittamalla tai somen kautta. 
       </p>
 
-      <h2>Kurssitoiminta</h2>
-
+      <h3>Kurssitoiminta</h3>
       <p>
         Tarjoamme monipuolisesti opettavia kursseja eläinten hoidosta ja niiden terveyden ylläpitämisestä.
          Kursseilla käydään ensin läpi teoriaa ja loppupuolella päästään kokeilemaan kurssilla opittua 
@@ -65,8 +61,7 @@ export default function Services () {
          kotieläinpuiston tallimestari. Kurssien henkilö määrä on 10-50. 
       </p>
 
-      <h2>Kesäleirit</h2>
-
+      <h3>Kesäleirit</h3>
       <p>
         Kesällä tarjoamme perheen pienemmille opettavaisia kesäkursseja. Tutustumme eri eläimiin ja niiden
          hoitoon. Kursseilla päästään osallistumaan tilan eläinten hoitoon ja jokaiselle kurssilaiselle 

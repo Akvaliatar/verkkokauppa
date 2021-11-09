@@ -76,3 +76,13 @@ footer a:hover{
 .picture {
   text-align: center;
 }
+
+ul{
+  list-style: none;
+  color: #514B3B;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  padding-top: 0;
+}
