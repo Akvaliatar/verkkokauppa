@@ -10,8 +10,8 @@ import Logo from "../img/logo.png";
 
 export default function NavBar() {
   return (
-    <Navbar className="navbar" expand="lg">
-      <Container fluid>
+    <Container fluid>
+      <Container>
         <Row>
             <Col className="kieli">
               <a href="" className="FI">
@@ -36,8 +36,10 @@ export default function NavBar() {
             </Col>
         </Row>
       </Container>
+      <Navbar className="navbar" expand="lg">
       <Container>
         <Row>
+        
           <Col xs={12}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -52,7 +54,8 @@ export default function NavBar() {
           </Col>
         </Row>
       </Container>
-    </Navbar>
+      </Navbar>
+    </Container>
   );
 }
 
