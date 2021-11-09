@@ -10,8 +10,16 @@ h1 {
   text-align: center;
   width: 100%;
 }
+/*Tämä on mm. painikkeiden teksteille.*/
 h2 {
   font-family: 'Open Sans', sans-serif;
+  color: #514B3B;
+  text-align: center;
+  width: 100%;
+}
+/*Kaikki pienemmät otsikot pääotsikon jälkeen ja footerin linkit...*/
+h3 {
+  font-family: 'DM Serif Display', serif;
   color: #514B3B;
   text-align: center;
   width: 100%;
@@ -32,6 +40,7 @@ footer p {
 }
 
 footer a{
+  font-family: 'DM Serif Display', serif;
   text-decoration: none;
   color: #514B3B;
   margin-top: 1em;

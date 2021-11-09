@@ -7,7 +7,6 @@ import Services from "./js/Services"
 import Shop from "./js/Shop"
 import About from "./js/About"
 import NotFound from "./js/NotFound"
-import Header from "./js/Header"
 import Navbar from "./js/Navbar"
 import Footer from "./js/Footer"
 
@@ -15,7 +14,6 @@ function App () {
   return (
     <>
     
-    <Header />
     <Navbar />
     <div>
     <Switch>
