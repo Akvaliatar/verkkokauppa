@@ -24,7 +24,9 @@ export default function NavBar() {
             </Col>
             <Col>
               <figure>
-                <img src={Logo} />
+                <Link to="">
+                  <img src={Logo}/>
+                </Link>
               </figure>
             </Col>
             <Col>

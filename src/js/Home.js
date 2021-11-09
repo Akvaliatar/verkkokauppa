@@ -29,6 +29,9 @@ export default function Home() {
         Toivon kotipuisto sijaitsee Oulun keskustasta n.30 min ajomatkan päästä luonnon keskuudessa 
         kauniin  merinäkymän vieressä. Tilalle pääsee helposti myös julkisia käyttäen. 
       </p>
+      <p>Verkkosivuillamme pääset tarkistamaan ajankohtaiset tapahtumat, tutkimaan puiston tekemiä
+        tuotteita (mm. alpakan villalankaa, maapähkinäherkkuja koirille ja hunajaa) sekä tilaamaan lippuja
+        puistoon. Kaiken voi myös ostaa lahjaksi!</p>
       <p>
         Tilalla pääset tutustumaan kiltteihin ja hellyttäviin kotieläimiin, kuten lampaisiin, laamoihin, 
         lehmiin, poroihin, kissoihin, koiriin, pupuihin, kanoihin, ankkoihin, vuohiin tai jopa hieman 

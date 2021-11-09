@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -27,7 +28,7 @@ export default function Footer () {
           </Col>
           <Col>
           <h3>Seuraa meitä</h3>
-            <p><SiInstagram />     <SiFacebook /></p>
+            <p> <Link to="https://www.instagram.com/toivon_kotielainpuisto/"><SiInstagram /></Link><Link to ="https://www.facebook.com/profile.php?id=100074719422748"><SiFacebook /></Link></p>
           </Col>
           <Col>
             <h3>Lataa sovellus</h3>
