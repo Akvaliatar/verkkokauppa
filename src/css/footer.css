@@ -1,0 +1,37 @@
+footer {
+  background-color: #a8ae8a;
+}
+
+footer p {
+  text-align: start;
+}
+
+footer a {
+  font-family: "DM Serif Display", serif;
+  text-decoration: none;
+  color: #514b3b;
+  margin-top: 1em;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: #948f84;
+}
+/*lista sivujen linkeistä*/
+ul {
+  list-style: none;
+  color: #514b3b;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  margin-top: 1em;
+  padding: 15px;
+  padding-top: 0;
+}
+/*ikonien asettelu*/
+.ikonit {
+    text-align: center;
+    padding: 0.1em;
+}
+.ikonit a {
+    padding: 0.3em;
+}

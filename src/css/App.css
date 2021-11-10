@@ -24,6 +24,7 @@ h3 {
   color: #514B3B;
   text-align: center;
   width: 100%;
+  padding-top: 0.3em;
 }
 p {
   color: #514B3B;
@@ -32,30 +33,7 @@ p {
   width: 100%;
   padding: 15px;
 }
-footer {
-  background-color: #A8AE8A;
-}
-
-footer p {
-  text-align: start;
-}
-
-footer a{
-  font-family: 'DM Serif Display', serif;
-  text-decoration: none;
-  color: #514B3B;
-  margin-top: 1em;
-}
-
-footer a:hover{
-  text-decoration: none;
-  color: #948f84;
-}
-
-.footer_ul {
-  list-style-type: none;
-}
-
+/*scroll-btn*/
 .back-to-top {
   position: fixed;
   bottom: 20px;
@@ -73,17 +51,7 @@ footer a:hover{
 .back-to-top:hover {
   background: #514B3B;
 }
-
+/*home-sivun ja muiden kappale-erottelu*/
 .picture {
   text-align: center;
-}
-
-ul{
-  list-style: none;
-  color: #514B3B;
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-  width: 100%;
-  padding: 15px;
-  padding-top: 0;
 }
