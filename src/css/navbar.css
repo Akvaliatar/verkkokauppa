@@ -1,11 +1,13 @@
 /*Kielinapin muotoilu, vasen yläkulma isolla näytöllä, mobiilissa ja tabletilla hampurilaisessa.*/
 .kieli {
-  width: 20%;
+    width: 100%;
+    text-align: center;
+    padding-top: 2em;
 }
 .kieli a {
   text-decoration: none;
   color: #514b3b;
-  margin-top: 1em;
+  margin-top: 4em;
 }
 
 .kieli a:hover {
@@ -21,12 +23,19 @@
 .EN {
   margin-left: 0.2em;
 }
-
+/*Logo*/
 img {
-  width: 6em;
-  height: 6em;
+  width: 12em;
+  height: 12em;
 }
-
+.ostoskori {
+    margin-top: 1em;
+}
+/*alue missä edelliset ovat (header)*/
+.navi {
+  background-color: #a8ae8a;
+}
 .navbar {
   background-color: #a8ae8a;
+  text-align: center;
 }
