@@ -37,7 +37,7 @@ export default function Services () {
       </Row>
 
       <Row>
-        <Col xs={12} lg={6}>
+        <Col xs={{span: 12, order: 2}} lg={{span: 6, order: 1}}>
           <h3>Opastetut kierrokset</h3>
           <p>
             Tarjoamme opastettuja kierroksia missä tutustumme puiston tiloihin ja eläimiin. 
@@ -46,8 +46,11 @@ export default function Services () {
             Samalla tutustumme tilalla oleva kahvilan herkkuihin ja puotiin. Opastettujen 
             kierrosten ryhmäkoko on 10-30 henkeä. 
           </p>
+          <div className="buttonToCenter">
+            <button className="seviceButton" >LUE LISÄÄ</button>
+          </div>
         </Col>
-        <Col xs={12} lg={6} >
+        <Col xs={{span: 12, order: 1}} lg={{span: 6, order:2}} >
           <figure className="servicePics">
             <img src={Sheep} />
           </figure>
@@ -56,7 +59,12 @@ export default function Services () {
       </Row>
       
       <Row>
-        <Col xs={12} lg={6} >
+        <Col xs={{span: 12, order: 1}} lg={{span: 6, order:2}} >
+          <figure className="servicePics">
+            <img src={Pig} />
+          </figure>
+        </Col>
+        <Col xs={{span: 12, order: 1}} lg={{span: 6, order:2}} >
           <h3>Terapiatoiminta</h3>
           <p>
             Tarjoamme erilaisia eläinpohjaista terapian muotoja asiakkaille. Terapia toteutetaan osaavien
@@ -64,34 +72,38 @@ export default function Services () {
             yksilö- tai ryhmäterapiana. Suosituimmat tarjolla olevat terapia ryhmät ovat ratsastusterapia 
             ja toimintaterapia, missä hoidamme ryhmässä tilan eläimiä. 
           </p>
+          <div className="buttonToCenter">
+            <button className="seviceButton" >LUE LISÄÄ</button>
+          </div>
         </Col>
-        <Col xs={12} lg={6} >
-          <figure className="servicePics">
-            <img src={Pig} />
-          </figure>
-        </Col>
-        
       </Row>
 
       <Row>
-        <Col xs={12} lg={6} >
+        <Col xs={{span: 12, order: 2}} lg={{span: 6, order:2}} >
           <h3>Kummitoiminta</h3>
           <p>
             Kiinnostaisiko ryhtyä eläimelle kummiksi? Meillä on  siihen mahdollisuus. Pääset valitsemaan 
             tilan  asukkaista “oman” eläimen, jota pääset hoitamaan ja tapaamaan etukäteen sovittuina 
             tapaamisilla. Jos kiinnostuit ota rohkeasti yhteyttä meihin joko soittamalla tai somen kautta. 
           </p>
+          <div className="buttonToCenter">
+            <button className="seviceButton" >LUE LISÄÄ</button>
+          </div>
         </Col>
-        <Col xs={12} lg={6} >
+        <Col xs={{span: 12, order: 1}} lg={{span: 6, order:2}} >
           <figure className="servicePics">
             <img src={Dogandcat} />
           </figure>
         </Col>
-        
       </Row>
 
       <Row>
-        <Col xs={12} lg={6} >
+        <Col xs={{span: 12, order: 1}} lg={{span: 6, order:2}} >
+          <figure className="servicePics">
+            <img src={Horseandkid} />
+          </figure>
+        </Col>
+        <Col xs={{span: 12, order: 1}} lg={{span: 6, order:2}} >
           <h3>Kurssitoiminta</h3>
           <p>
             Tarjoamme monipuolisesti opettavia kursseja eläinten hoidosta ja niiden terveyden ylläpitämisestä.
@@ -99,25 +111,25 @@ export default function Services () {
             tietoa puiston turvallisessa ympäristössä opettajan ohjauksen avulla. Opettajina toimii osaava 
             kotieläinpuiston tallimestari. Kurssien henkilö määrä on 10-50. 
           </p>
+          <div className="buttonToCenter">
+            <button className="seviceButton" >LUE LISÄÄ</button>
+          </div>
         </Col>
-        <Col xs={12} lg={6} >
-          <figure className="servicePics">
-            <img src={Horseandkid} />
-          </figure>
-        </Col>
-        
       </Row>
 
       <Row>
-        <Col xs={12} lg={6} >
+        <Col xs={{span: 12, order: 2}} lg={{span: 6, order:2}} >
           <h3>Kesäleirit</h3>
           <p>
             Kesällä tarjoamme perheen pienemmille opettavaisia kesäkursseja. Tutustumme eri eläimiin ja niiden
             hoitoon. Kursseilla päästään osallistumaan tilan eläinten hoitoon ja jokaiselle kurssilaiselle 
             annetaan kurssin ajaksi oma hoidokki, jonka hoitoon osallistumaan kesäleirin aikana. 
           </p>
+          <div className="buttonToCenter">
+            <button className="seviceButton" >LUE LISÄÄ</button>
+          </div>
         </Col>
-        <Col xs={12} lg={6} >
+        <Col xs={{span: 12, order: 1}} lg={{span: 6, order:2}} >
           <figure className="servicePics">
             <img src={Chikens} />
           </figure>

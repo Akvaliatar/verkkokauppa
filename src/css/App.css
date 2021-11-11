@@ -39,12 +39,12 @@ p {
   bottom: 20px;
   right: 20px;
   font-size: 30px;
-  background: #A8AE8A;
+  background: #514B3B;
   color: white;
   cursor: pointer;
   border-radius: 30px;
   border: none;
-  box-shadow: 0 5px 10px #ccc;
+  /*box-shadow: 0 5px 10px #ccc;*/
 
 }
 
@@ -56,10 +56,59 @@ p {
   text-align: center;
 }
 
-/*Service sivun kuvat */
+/*Service + Us +Home sivun kuvat + button */
 .servicePics{
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.buttonToCenter{
+  text-align: center;
+}
+
+.seviceButton{
+  text-align: center;
+  margin-bottom: 10%;
+  border-style: none;
+  padding: 2%;
+  font-family: 'Open Sans', sans-serif;
+  color: #514B3B;
+  text-align: center;
+  text-decoration: none;
+}
+
+.seviceButton:hover{
+  color: #514B3B;
+  background-color: #a8ae8a;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.seviceButton:active{
+  box-shadow: none;
+  transform: translateY(0);
+  text-decoration: none;
+}
+a:link, a:visited {
+  font-family: 'Open Sans', sans-serif;
+  color: #514B3B;
+  text-align: center;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  font-family: 'Open Sans', sans-serif;
+  color: #514B3B;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* About sivun ul elementti*/
+.AboutULElement{
+  text-align: center;
 }

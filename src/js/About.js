@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { SiFacebook, SiInstagram } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 
 export default function About () {
@@ -23,17 +26,40 @@ export default function About () {
   };
 
   return (
-    <div>
-      <h1>Yhteystiedot</h1>
-      <p>
-        Tilan puhelinaika arkisin on klo 9-16. Viikonloppuisin klo 10-14. Muina aikoina voi laittaa viestiä somen kautta.
-      </p>
-      <ul>
-        <li>puhelinumero 040-14581893</li>
-        <li>sähköposti toivonkotielainpusito@gmail.fi</li>
-        <li>Instagram</li>
-        <li>Facebook</li>
-      </ul>
+    <Container>
+      <Row>
+        <h1>Yhteystiedot</h1>
+      </Row>
+      <Row>
+        <Col xs={{span: 12, order: 1}} lg={{span: 6, order: 1}}  >
+          <p>
+            Tilan puhelinaika arkisin on klo 9-16. Viikonloppuisin klo 10-14. Muina aikoina voi laittaa viestiä somen kautta.
+          </p>
+          <p>
+            Tilan puhelinaika arkisin on klo 9-16. Viikonloppuisin klo 10-14. Muina aikoina voi laittaa viestiä somen kautta.
+          </p>
+        </Col>
+        <Col xs={{span: 12, order: 2}} lg={{span: 6, order: 2}}  >
+          <ul className="AboutULElement">
+            <li>puhelinumero 040-14581893</li>
+            <li>sähköposti toivonkotielainpusito@gmail.fi</li>
+            <li>Instagram&nbsp;
+              <a>
+                <Link to="https://www.instagram.com/toivon_kotielainpuisto/">
+                  <SiInstagram size={28} />
+                </Link>
+              </a>
+            </li>
+            <li>Facebook&nbsp;
+              <a>
+                <Link to="https://www.facebook.com/profile.php?id=100074719422748">
+                  <SiFacebook size={28} />
+                </Link>
+              </a>
+            </li>
+          </ul>
+        </Col>
+      </Row>
 
       {showButton && (
         <button onClick={scrollToTop} className="back-to-top">
@@ -41,6 +67,6 @@ export default function About () {
         </button>
       )}
 
-    </div>
+    </Container>
   )
 }
