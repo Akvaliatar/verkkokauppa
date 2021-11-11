@@ -55,3 +55,11 @@ p {
 .picture {
   text-align: center;
 }
+
+/*Service sivun kuvat */
+.servicePics{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
