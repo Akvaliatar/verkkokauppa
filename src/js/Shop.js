@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import DogandCat from '../img/dogandcat.jpg';
 
 export default function Shop () {
 
@@ -26,104 +27,95 @@ export default function Shop () {
     <Container className="shopContainer">
       <Row>
         <Col xs={{span: 12, order: 2}} lg={{span: 12, order: 1}}>
+          <h1>Shop</h1>
         </Col>
         <Col xs={{span: 12, order: 1}} lg={{span: 12, order: 1}}>
-          <p>
-            Sivuiltamme löydät tietoa eläinpuistostamme ja voit myös käydä
-            katsomassa verkkokauppamme sisältöä ja tarjottavia palveluita
-          </p>
           <p>Alta löydät omista kategorioista myytävänä olevia tuotteita ja palveluita.</p>
         </Col>
       </Row>
 
       <Row>
         <Col xs={{ span: 12, order: 1 }} md={{ span: 6, order: 1 }} lg={{ span: 4, order: 1 }} >
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
+          <Card style={{ width: '18rem', border: " 2px solid #514b3b" }}>
+            <Card.Img variant="top" src={"http://localhost:8000"+DogandCat} />
+            <Card.Body style={{ background: "#a8ae8a"}}>
               <Card.Title>Eläin herkut</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                Täältä voit katsella Toivon kotieläinpuiston eläinten lempi herkkuja ja voit ostelle herkkuja omalle lenmmikille.
               </Card.Text>
               <div className="buttonToCenter" >
-                <button className="webShopButton">Go somewhere</button>
+                <button className="webShopButton"><a href="#">Katso lisää</a></button>
               </div>
               
             </Card.Body>
           </Card>
         </Col>
         <Col xs={{ span: 12, order: 2 }} md={{ span: 6, order: 2 }} lg={{ span: 4, order: 2 }} >
-          <Card style={{ width: '18rem' }}>
+          <Card style={{ width: '18rem', border: " 2px solid #514b3b" }} >
             <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-              <Card.Title >Eläinten hoitotuotteet</Card.Title>
+            <Card.Body style={{ background: "#a8ae8a"}} >
+              <Card.Title>Eläinten hoitotuotteet</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                Kategoriasta löydät eläinystävällisiä hoitotuotteita.
               </Card.Text>
               <div className="buttonToCenter" >
-                <button className="webShopButton">Go somewhere</button>
+                <button className="webShopButton">Katso lisää</button>
               </div>
             </Card.Body>
           </Card>
         </Col>
         <Col xs={{ span: 12, order: 3 }} md={{ span: 6, order: 3 }} lg={{ span: 4, order: 3 }} >
-          <Card style={{ width: '18rem' }}>
+          <Card style={{ width: '18rem', border: " 2px solid #514b3b" }} >
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
               <Card.Title>Askastelu tarvikkeita</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                Askartelu tarvikkeita mukavaan puuhasteluun
               </Card.Text>
               <div className="buttonToCenter" >
-                <button className="webShopButton">Go somewhere</button>
+                <button className="webShopButton">Katso lisää</button>
               </div>
             </Card.Body>
           </Card>
         </Col>
         <Col xs={{ span: 12, order: 4 }} md={{ span: 6, order: 4 }} lg={{ span: 4, order: 4 }} >
-          <Card style={{ width: '18rem' }}>
+          <Card  >
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
               <Card.Title>Asusteet</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                Täältä löydät tilan omasta villasta tehtyjä villa-asusteita
               </Card.Text>
               <div className="buttonToCenter" >
-                <button className="webShopButton">Go somewhere</button>
+                <button className="webShopButton">Katso lisää</button>
               </div>
             </Card.Body>
           </Card>
         </Col>
         <Col xs={{ span: 12, order: 5 }} md={{ span: 6, order: 5 }} lg={{ span: 4, order: 5 }} >
-          <Card style={{ width: '18rem' }}>
+          <Card  >
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
               <Card.Title>Palveluita</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                Tästä pääset katselemaan mitä eripalveluita tarjoamme asiakkaille
               </Card.Text>
               <div className="buttonToCenter" >
-                <button className="webShopButton">Go somewhere</button>
+                <button className="webShopButton">Katso lisää</button>
               </div>
             </Card.Body>
           </Card>
         </Col>
         <Col xs={{ span: 12, order: 6 }} md={{ span: 6, order: 6 }} lg={{ span: 4, order: 6 }} >
-          <Card style={{ width: '18rem' }}>
+          <Card >
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
               <Card.Title>Kaikki tuottet</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                Täältä löydät kaikki myytävänä olevat tuoteet helposti.
               </Card.Text>
               <div className="buttonToCenter" >
-                <button className="webShopButton">Go somewhere</button>
+                <button className="webShopButton">Katso lisää</button>
               </div>
             </Card.Body>
           </Card>
