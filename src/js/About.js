@@ -44,14 +44,14 @@ export default function About () {
             <li>puhelinumero 040-14581893</li>
             <li>sähköposti toivonkotielainpusito@gmail.fi</li>
             <li>Instagram&nbsp;
-              <a>
+              <a className="aboutPageLinks">
                 <Link to="https://www.instagram.com/toivon_kotielainpuisto/">
                   <SiInstagram size={28} />
                 </Link>
               </a>
             </li>
             <li>Facebook&nbsp;
-              <a>
+              <a className="aboutPageLinks">
                 <Link to="https://www.facebook.com/profile.php?id=100074719422748">
                   <SiFacebook size={28} />
                 </Link>

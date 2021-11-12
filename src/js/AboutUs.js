@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import Barn from '../img/barn.jpg';
 import Piglets from '../img/piglets.jpg';
 import Goat from '../img/goat.jpg';
@@ -54,14 +54,14 @@ export default function AboutUs () {
         </Col>
         <Col xs={{span: 12, order: 1}} lg={{span: 6, order: 2}}>
           <figure className="servicePics">
-            <img src={Barn} />
+            <Image src={Barn} fluid style={{ width: "100%", height: "100%", paddingTop: "10px" }} />
           </figure>
         </Col>
       </Row>
       <Row>
         <Col xs={{span: 12, order: 2}} lg={{span: 6, order: 1}} >
           <figure className="servicePics">
-            <img src={Womanandllama} />
+            <Image src={Womanandllama} fluid style={{ width: "100%", height: "100%" }} />
           </figure>
         </Col>
         <Col xs={{span: 12, order: 2}} lg={{span: 6, order: 2}}>
@@ -71,7 +71,7 @@ export default function AboutUs () {
             monipuolisesti opettavia kursseja. Palveluihin voi tutustua tarkemmin palvelut sivuilta.
           </p>
           <div className="buttonToCenter">
-            <button className="seviceButton" ><a href="#" >LUE LISÄÄ</a></button>
+            <button className="seviceButton" ><a href="../js/Services.js" >LUE LISÄÄ</a></button>
           </div>
         </Col>
       </Row>
@@ -83,16 +83,16 @@ export default function AboutUs () {
             kaikille. Puiston työntekijät auttavat ja ohjeistavat ongelmatilanteissa.
           </p>
         </Col>
-        <Col xs={{span: 12, order: 2}} lg={{span: 6, order: 2}} >
+        <Col xs={{span: 12, order: 1}} lg={{span: 6, order: 2}} >
           <figure className="servicePics">
-            <img src={Goat} />
+            <Image src={Goat} fluid style={{ width: "100%", height: "100%" }} />
           </figure>
         </Col>
       </Row>
       <Row>
         <Col xs={{span: 12, order: 2}} lg={{span: 6, order: 1}}>
           <figure className="servicePics">
-            <img src={Piglets} />
+            <Image src={Piglets} fluid style={{ width: "100%", height: "100%" }} />
           </figure>
         </Col>
         <Col xs={{span: 12, order: 2}} lg={{span: 6, order: 2}} >

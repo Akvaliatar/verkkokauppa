@@ -51,10 +51,6 @@ p {
 .back-to-top:hover {
   background: #514B3B;
 }
-/*home-sivun ja muiden kappale-erottelu*/
-.picture {
-  text-align: center;
-}
 
 /*Service + Us +Home sivun kuvat + button */
 .servicePics{
@@ -62,8 +58,8 @@ p {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  max-width: 100%;
   max-height: 100%;
+  max-width: 100%;
 }
 
 .buttonToCenter{
@@ -108,9 +104,22 @@ a:hover, a:active {
   text-decoration: none;
 }
 
-/* About sivun ul elementti*/
+/* About sivun ul elementti + linkit*/
 .AboutULElement{
   text-align: center;
+  padding-top: 20px;
+}
+
+.aboutPageLinks a{
+  font-family: "DM Serif Display", serif;
+  text-decoration: none;
+  color: #514b3b;
+  margin-top: 1em;
+}
+
+.aboutPageLinks a:hover{
+  text-decoration: none;
+  color: #948f84;
 }
 
 /* Verkkokauppa sivun card elementtien testausta  + button style*/

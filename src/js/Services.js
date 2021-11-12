@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import Sheep from '../img/sheep.jpg';
 import Pig from '../img/piggy.jpg';
 import Dogandcat from '../img/dogandcat.jpg';
@@ -47,12 +47,12 @@ export default function Services () {
             kierrosten ryhmäkoko on 10-30 henkeä. 
           </p>
           <div className="buttonToCenter">
-            <button className="seviceButton" >LUE LISÄÄ</button>
+            <button className="seviceButton" ><a href="#" >LUE LISÄÄ</a></button>
           </div>
         </Col>
         <Col xs={{span: 12, order: 1}} lg={{span: 6, order:2}} >
           <figure className="servicePics">
-            <img src={Sheep} />
+            <Image src={Sheep} fluid style={{ width: "100%", height: "100%", paddingTop: "10px" }} />
           </figure>
         </Col>
         
@@ -61,7 +61,7 @@ export default function Services () {
       <Row>
         <Col xs={{span: 12, order: 1}} lg={{span: 6, order:2}} >
           <figure className="servicePics">
-            <img src={Pig} />
+            <Image src={Pig} fluid style={{ width: "100%", height: "100%" }} />
           </figure>
         </Col>
         <Col xs={{span: 12, order: 1}} lg={{span: 6, order:2}} >
@@ -73,7 +73,7 @@ export default function Services () {
             ja toimintaterapia, missä hoidamme ryhmässä tilan eläimiä. 
           </p>
           <div className="buttonToCenter">
-            <button className="seviceButton" >LUE LISÄÄ</button>
+            <button className="seviceButton" ><a href="#" >LUE LISÄÄ</a></button>
           </div>
         </Col>
       </Row>
@@ -87,12 +87,12 @@ export default function Services () {
             tapaamisilla. Jos kiinnostuit ota rohkeasti yhteyttä meihin joko soittamalla tai somen kautta. 
           </p>
           <div className="buttonToCenter">
-            <button className="seviceButton" >LUE LISÄÄ</button>
+            <button className="seviceButton" ><a href="#" >LUE LISÄÄ</a></button>
           </div>
         </Col>
         <Col xs={{span: 12, order: 1}} lg={{span: 6, order:2}} >
           <figure className="servicePics">
-            <img src={Dogandcat} />
+            <Image src={Dogandcat} fluid style={{ width: "100%", height: "100%" }} />
           </figure>
         </Col>
       </Row>
@@ -100,7 +100,7 @@ export default function Services () {
       <Row>
         <Col xs={{span: 12, order: 1}} lg={{span: 6, order:2}} >
           <figure className="servicePics">
-            <img src={Horseandkid} />
+            <Image src={Horseandkid} fluid style={{ width: "100%", height: "100%" }} />
           </figure>
         </Col>
         <Col xs={{span: 12, order: 1}} lg={{span: 6, order:2}} >
@@ -112,7 +112,7 @@ export default function Services () {
             kotieläinpuiston tallimestari. Kurssien henkilö määrä on 10-50. 
           </p>
           <div className="buttonToCenter">
-            <button className="seviceButton" >LUE LISÄÄ</button>
+            <button className="seviceButton" ><a href="#" >LUE LISÄÄ</a></button>
           </div>
         </Col>
       </Row>
@@ -126,12 +126,12 @@ export default function Services () {
             annetaan kurssin ajaksi oma hoidokki, jonka hoitoon osallistumaan kesäleirin aikana. 
           </p>
           <div className="buttonToCenter">
-            <button className="seviceButton" >LUE LISÄÄ</button>
+            <button className="seviceButton" ><a href="#" >LUE LISÄÄ</a></button>
           </div>
         </Col>
         <Col xs={{span: 12, order: 1}} lg={{span: 6, order:2}} >
           <figure className="servicePics">
-            <img src={Chikens} />
+            <Image src={Chikens} fluid style={{ width: "100%", height: "100%" }} />
           </figure>
         </Col>
       </Row>
