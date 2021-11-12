@@ -112,3 +112,54 @@ a:hover, a:active {
 .AboutULElement{
   text-align: center;
 }
+
+/* Verkkokauppa sivun card elementtien testausta  + button style*/
+
+
+.webShopButton{
+  text-align: center;
+  margin-bottom: 10%;
+  border-style: none;
+  padding: 2%;
+  font-family: 'Open Sans', sans-serif;
+  color: #514B3B;
+  text-align: center;
+  text-decoration: none;
+}
+
+.webShopButton:hover{
+  color: #514B3B;
+  background-color: #a8ae8a;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.webShopButton:active{
+  box-shadow: none;
+  transform: translateY(0);
+  text-decoration: none;
+}
+a:link, a:visited {
+  font-family: 'Open Sans', sans-serif;
+  color: #514B3B;
+  text-align: center;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  font-family: 'Open Sans', sans-serif;
+  color: #514B3B;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card {
+  background: #a8ae8a;
+  border: 1px solid #514B3B;
+  font-family: 'Open Sans', sans-serif;
+  color: #514B3B;
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 18rem;
+}
