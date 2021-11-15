@@ -33,6 +33,10 @@ p {
   width: 100%;
   padding: 15px;
 }
+/*img täytyy aina olla ensin 100%, joten lisään suoraan tänne..kuvan koko määritellään figurella/divillä*/
+img {
+  width: 100%;
+}
 /*scroll-btn*/
 .back-to-top {
   position: fixed;

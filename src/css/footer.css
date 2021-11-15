@@ -17,6 +17,9 @@ footer a:hover {
   text-decoration: none;
   color: #948f84;
 }
+footer h3 {
+    font-size: 1.2em;
+}
 /*lista sivujen linkeistä*/
 ul {
   list-style: none;

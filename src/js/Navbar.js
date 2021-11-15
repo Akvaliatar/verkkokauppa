@@ -13,10 +13,10 @@ export default function NavBar() {
     <div className="navi">
       <Container fluid className="mx-auto">
         <Row>
-          <Col className="kieli">
+          <Col className="kieli" xs={3} md={5}>
             <div>
               <a href="" className="FI">
-                FI
+                FI 
               </a>
               <a>|</a>
               <a href="" className="EN">
@@ -24,14 +24,14 @@ export default function NavBar() {
               </a>
             </div>
           </Col>
-          <Col>
+          <Col xs={6} md={2}>
             <figure>
               <Link to="">
                 <img src={Logo} />
               </Link>
             </figure>
           </Col>
-          <Col>
+          <Col xs={3} md={5}>
             <p className="ostoskori">
               <BsCart4 size={38} />
             </p>
@@ -43,7 +43,7 @@ export default function NavBar() {
           <Col>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mx-auto">
+              <Nav className="mx-auto" className="navlinks">
                 <Nav.Link href="/">
                   <h3>Home</h3>
                 </Nav.Link>

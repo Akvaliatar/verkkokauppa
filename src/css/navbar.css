@@ -24,10 +24,14 @@
   margin-left: 0.2em;
 }
 /*Logo*/
-img {
-  width: 12em;
-  height: 12em;
+figure {
+  text-align: center;
+  padding-top: 0;
 }
+img {
+  width: 10em;
+}
+
 .ostoskori {
     margin-top: 1em;
 }
@@ -38,4 +42,10 @@ img {
 .navbar {
   background-color: #a8ae8a;
   text-align: center;
+}
+Nav h3 {
+  padding: 0 2em 0 2em;
+}
+Nav h3:hover, .ostoskori:hover {
+  color: #706a58;
 }
