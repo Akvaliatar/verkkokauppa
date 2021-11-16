@@ -13,6 +13,18 @@ export default function NavBar() {
     <div className="navi">
       <Container fluid className="mx-auto">
         <Row>
+        <Col lg={9}>
+            <div className="tunnistautuminen">
+              <Link>
+                <a>Kirjaudu</a>
+              </Link>
+              <Link>
+                <a>Rekisteröidy</a>
+              </Link>
+            </div>
+          </Col>
+        </Row>
+        <Row>
           <Col className="kieli" xs={3} md={5}>
             <div>
               <a href="" className="FI">
