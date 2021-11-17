@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import DogandCat from '../img/dogandcat.jpg';
+import Logo from '../img/logo.png';
 
 export default function Shop () {
 
@@ -37,7 +38,7 @@ export default function Shop () {
       <Row>
         <Col xs={{ span: 12, order: 1 }} md={{ span: 6, order: 1 }} lg={{ span: 4, order: 1 }} >
           <Card style={{ width: '18rem', border: " 2px solid #514b3b" }}>
-            <Card.Img variant="top" src={"http://localhost:8000"+DogandCat} />
+            <Card.Img variant="top" src={DogandCat} />
             <Card.Body style={{ background: "#a8ae8a"}}>
               <Card.Title>Eläin herkut</Card.Title>
               <Card.Text>
@@ -52,7 +53,7 @@ export default function Shop () {
         </Col>
         <Col xs={{ span: 12, order: 2 }} md={{ span: 6, order: 2 }} lg={{ span: 4, order: 2 }} >
           <Card style={{ width: '18rem', border: " 2px solid #514b3b" }} >
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={"https://koulu-b8d54.web.app/kissa.jpg"} /> {/* testattu että linkitys toimii toiselta sivulta */}
             <Card.Body style={{ background: "#a8ae8a"}} >
               <Card.Title>Eläinten hoitotuotteet</Card.Title>
               <Card.Text>
@@ -66,7 +67,7 @@ export default function Shop () {
         </Col>
         <Col xs={{ span: 12, order: 3 }} md={{ span: 6, order: 3 }} lg={{ span: 4, order: 3 }} >
           <Card style={{ width: '18rem', border: " 2px solid #514b3b" }} >
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={"https://koulu-b8d54.web.app/kissa.jpg"} />
             <Card.Body>
               <Card.Title>Askastelu tarvikkeita</Card.Title>
               <Card.Text>
@@ -80,7 +81,7 @@ export default function Shop () {
         </Col>
         <Col xs={{ span: 12, order: 4 }} md={{ span: 6, order: 4 }} lg={{ span: 4, order: 4 }} >
           <Card  >
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={"https://koulu-b8d54.web.app/kissa.jpg"} />
             <Card.Body>
               <Card.Title>Asusteet</Card.Title>
               <Card.Text>
@@ -94,7 +95,7 @@ export default function Shop () {
         </Col>
         <Col xs={{ span: 12, order: 5 }} md={{ span: 6, order: 5 }} lg={{ span: 4, order: 5 }} >
           <Card  >
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={"https://koulu-b8d54.web.app/kissa.jpg"} />
             <Card.Body>
               <Card.Title>Palveluita</Card.Title>
               <Card.Text>
@@ -108,7 +109,7 @@ export default function Shop () {
         </Col>
         <Col xs={{ span: 12, order: 6 }} md={{ span: 6, order: 6 }} lg={{ span: 4, order: 6 }} >
           <Card >
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={Logo} />
             <Card.Body>
               <Card.Title>Kaikki tuottet</Card.Title>
               <Card.Text>
