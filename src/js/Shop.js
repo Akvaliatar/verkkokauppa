@@ -6,9 +6,9 @@ import axios from "axios"
 
 export default function Shop() {
 
+  {/* getcategories php ja axios kategorioiden hakuuns */}
   const CATEGORY = "http://localhost/kotielainpuisto/products/getcategories.php"
   const [item, setItem] = useState([])
-  const [tuoteryhma, setTuoteryhma] = useState("")
 
   useEffect(() => {
     axios.get(CATEGORY)
@@ -140,7 +140,7 @@ export default function Shop() {
       </Row>
 
 
-
+    {/* kategorioiden haku backendistä */}
       {item?.map(item => (
         <div key={item.trnro}>
             <Card style={{ width: '18rem', border: " 2px solid #514b3b" }}>
