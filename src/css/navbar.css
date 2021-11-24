@@ -1,10 +1,10 @@
 /*kirjautuminen/rekisteröityminen omalla rivillä muusta navista*/
 .tunnistautuminen {
   text-align: right;
-  margin: 0.2em;
+  margin: 0.2em 0.2em 0;
 }
 .tunnistautuminen a {
-  padding: 0.3em;
+  padding: 0.3em 0.3em 0;
 }
 .tunnistautuminen a:hover {
   color: #706a58;
