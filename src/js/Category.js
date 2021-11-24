@@ -9,8 +9,7 @@ export default function Details (props) {
   const URL = "http://localhost/kotielainpuisto/products/getproducts.php/"
   let PRODUCT = URL + props.trnro
   const [item, setItem] = useState([])
-
-  
+  let productPicture =  "https://koulu-b8d54.web.app/" + item.tuotenro
 
   useEffect(() => {
     axios.get(PRODUCT)
@@ -24,7 +23,7 @@ export default function Details (props) {
   return (
     <div>
         <div>
-          {/* tähän tulee nopea tieto, kategorian nimi ja lyhyt teksti */}
+          {/* tähän tulee kategorian nimi ja lyhyt teksti */}
           <h3>{props.trnimi}</h3>
           <p>{props.teksti}</p>
           <p><a href='#' onClick={props.close}>Paina tästä palataksesi kategorian valintaan</a></p>
@@ -34,7 +33,7 @@ export default function Details (props) {
         {item?.map(item => (
           <div key={item.tuotenro}>
               <Card style={{ width: '18rem', border: " 2px solid #514b3b" }}>
-                <Card.Img variant="top" src={DogandCat} />
+                <Card.Img variant="top" src={"https://koulu-b8d54.web.app/kissa.jpg"} />
                 <Card.Body style={{ background: "#a8ae8a" }}>
                   <Card.Title><p>{item.tuotenimi}</p></Card.Title>
                   <Card.Text>

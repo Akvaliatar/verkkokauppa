@@ -71,7 +71,7 @@ export default function AboutUs () {
             monipuolisesti opettavia kursseja. Palveluihin voi tutustua tarkemmin palvelut sivuilta.
           </p>
           <div className="buttonToCenter">
-            <button className="seviceButton" ><a href="../js/Services.js" >LUE LISÄÄ</a></button>
+            <button className="seviceButton" ><a href="./Services" >LUE LISÄÄ</a></button>
           </div>
         </Col>
       </Row>

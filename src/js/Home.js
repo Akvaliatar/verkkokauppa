@@ -68,7 +68,7 @@ export default function Home() {
             monipuolisesti opettavia kursseja. Palveluihin voi tutustua tarkemmin palvelut sivuilta.
           </p>
           <div className="buttonToCenter">
-            <button className="seviceButton" ><a href="../js/Services.js" >LUE LISÄÄ</a></button>
+            <button className="seviceButton" ><a href="./Services" >LUE LISÄÄ</a></button>
           </div>
         </Col>
         <Col xs={{span: 12, order: 1}} lg={{span: 6, order: 1}} >
