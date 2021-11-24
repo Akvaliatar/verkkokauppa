@@ -70,7 +70,7 @@ export default function Shop() {
 
         {/* kategorioiden haku backendistä */}
         {item?.map(item => (
-          <div key={item.trnro} onClick={e => setSelectedItem(item)}>
+          <div key={item.trnro}>
             <Card style={{ width: '18rem', border: " 2px solid #514b3b" }}>
               <Card.Img variant="top" src={DogandCat} />
               <Card.Body style={{ background: "#a8ae8a" }}>
