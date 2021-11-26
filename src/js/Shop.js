@@ -5,7 +5,7 @@ import Logo from '../img/logo.png';
 import axios from "axios"
 import Category from "./Category";
 
-export default function Shop() {
+export default function Shop(addToCart) {
 
   {/* getcategories php ja axios kategorioiden hakuuns */ }
   const CATEGORY = "http://localhost/kotielainpuisto/products/getcategories.php"
@@ -80,6 +80,9 @@ export default function Shop() {
                 </Card.Text>
                 <div className="buttonToCenter" >
                   <button className="webShopButton" onClick={e => setSelectedItem(item)}>Katso lisää</button>
+                </div>
+                <div className="buttonToCenter" >
+                  <button className="webShopButton" onClick={e => addToCart(item)}>Lisää ostoskoriin</button>
                 </div>
               </Card.Body>
             </Card>
