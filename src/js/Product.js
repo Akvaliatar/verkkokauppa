@@ -10,6 +10,7 @@ export default function Product() {
         <Container>
             <Row>
                 <Col>
+                <h1>Tuote</h1>
                 </Col>
             </Row>
         </Container>

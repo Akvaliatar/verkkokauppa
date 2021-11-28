@@ -66,7 +66,7 @@ export default function NavBar({url, setCategory, cart}) {
                 <Nav.Link href="/services">
                   <h3>Palvelut</h3>
                 </Nav.Link>
-                <Nav.Link href="/shop">
+                <Nav.Link href="/shop" >
                   <h3>Verkkokauppa</h3>
                 </Nav.Link>
                 <Nav.Link href="/about">

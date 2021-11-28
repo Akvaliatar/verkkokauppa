@@ -5,7 +5,7 @@ import Logo from '../img/logo.png';
 import axios from "axios"
 import Category from "./Category";
 
-export default function Shop(addToCart) {
+export default function Shop() {
 
   {/* getcategories php ja axios kategorioiden hakuuns */ }
   const CATEGORY = "http://localhost/kotielainpuisto/products/getcategories.php"
@@ -25,7 +25,7 @@ export default function Shop(addToCart) {
     setSelectedItem(null)
   }
 
-
+  {/* scroll button */ }
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -80,9 +80,6 @@ export default function Shop(addToCart) {
                 </Card.Text>
                 <div className="buttonToCenter" >
                   <button className="webShopButton" onClick={e => setSelectedItem(item)}>Katso lisää</button>
-                </div>
-                <div className="buttonToCenter" >
-                  <button className="webShopButton" onClick={e => addToCart(item)}>Lisää ostoskoriin</button>
                 </div>
               </Card.Body>
             </Card>
