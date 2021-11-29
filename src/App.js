@@ -11,7 +11,7 @@ import About from "./js/About"
 import NotFound from "./js/NotFound"
 import Navbar from "./js/Navbar"
 import Footer from "./js/Footer"
-import Product from './js/Product';
+
 
 const URL = "http://localhost/kotielainpuisto"
 

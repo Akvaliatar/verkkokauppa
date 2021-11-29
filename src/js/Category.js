@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import DogandCat from '../img/dogandcat.jpg';
-import { Link } from 'react-router-dom';
+
 
 export default function Details (props,{addToCart}) {
 
@@ -60,47 +60,7 @@ export default function Details (props,{addToCart}) {
           </a>
         </p>
       </div>
-
-      {/* Tämä näyttää halutun kategorian tiedot. Vielä puuttuu oleellisia tietoja, esim hinta */}
-      {item?.map((item) => (
-        <div key={item.tuotenro}>
-          <Card style={{ width: "18rem", border: " 2px solid #514b3b" }}>
-            <Card.Img
-              variant="top"
-              src={"https://koulu-b8d54.web.app/kissa.jpg"}
-            />
-            <Card.Body style={{ background: "#a8ae8a" }}>
-              <Card.Title>
-                <p>{item.tuotenimi}</p>
-              </Card.Title>
-              <Card.Text>
-                <p>testi</p>
-              </Card.Text>
-              <div className="buttonToCenter">
-                <div key={productPicture.id}>
-                  <button className="webShopButton">
-                    <Link
-                      to={{
-                        pathname: "/product",
-                        state: {
-                          id: item.tuotenro,
-                        },
-                      }}
-                    >
-                      Katso lisää
-                    </Link>
-                  </button>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </div>
-<<<<<<< HEAD
-      ))}
-    </div>
-  );
-=======
-        
+ 
         {/* Tämä näyttää halutun kategorian tiedot. Vielä puuttuu oleellisia tietoja, esim hinta */}
         {item?.map(item => (
           <div key={item.tuotenro}>
@@ -136,5 +96,4 @@ export default function Details (props,{addToCart}) {
         ))}
 </div>
   )
->>>>>>> 2bcd75f94bf14eb9362819002171955c4c41dca3
 }
