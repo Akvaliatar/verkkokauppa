@@ -5,13 +5,15 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { SiFacebook, SiInstagram, SiGoogleplay, SiApple } from "react-icons/si";
+import { BiCopyright } from "react-icons/bi";
+
 
 export default function Footer() {
   return (
     <footer>
       <Container>
         <Row>
-          <Col>
+          <Col xs={4} md={4} lg={3}>
             <div>
               <ul>
                 <li>
@@ -29,7 +31,13 @@ export default function Footer() {
               </ul>
             </div>
           </Col>
-          <Col>
+          <Col lg={3} className="d-none d-lg-block">
+            <div className="yhtiedot">
+              <p>Puhelinnro: +358 66 666 6666</p>
+              <p>Sähköposti: toivonkotielainpuisto@gmail.com</p>
+            </div>
+          </Col>
+          <Col xs={4} md={4} lg={3}>
             <h3>Seuraa meitä</h3>
             <div className="ikonit">
               <a>
@@ -44,7 +52,7 @@ export default function Footer() {
               </a>
             </div>
           </Col>
-          <Col>
+          <Col xs={4} md={4} lg={3}>
             <h3>Lataa sovellus</h3>
             <div className="ikonit">
               <a>
@@ -58,6 +66,14 @@ export default function Footer() {
                 </Link>
               </a>
             </div>
+          </Col>
+        </Row>
+      </Container>
+      <Container className="copyright">
+        <Row>
+          <Col>
+            <p><BiCopyright size={24}/>: Valtteri Pitkänen, Niina Lipiäinen ja Aureliina Hietamies</p>
+            <p>OAMK 2021</p>
           </Col>
         </Row>
       </Container>

@@ -28,7 +28,14 @@ ul {
   width: 100%;
   margin-top: 1em;
   padding: 15px;
-  padding-top: 0;
+  padding-top: 0.2em;
+}
+/*yhteystiedot md- ja lg-ruuduilla*/
+.yhtiedot {
+  padding-top: 0.2em;
+}
+.yhtiedot p {
+  padding: 0;
 }
 /*ikonien asettelu*/
 .ikonit {
@@ -37,4 +44,15 @@ ul {
 }
 .ikonit a {
     padding: 0.3em;
+}
+/*copyright, omat nimet*/
+.copyright {
+  border-top: 3px #514b3b solid;
+  width: 100%;
+  padding: 0.2em;
+}
+.copyright p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
