@@ -7,8 +7,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { BsCart4 } from "react-icons/bs";
 import Logo from "../img/logo.png";
+import Cart from "./Cart";
 
-export default function NavBar() {
+export default function NavBar({url, setCategory, cart}) {
   return (
     <div className="navi">
       <Container fluid className="mx-auto">
@@ -45,7 +46,7 @@ export default function NavBar() {
           </Col>
           <Col xs={3} md={5}>
             <p className="ostoskori">
-              <BsCart4 size={38} />
+              <Cart cart={cart} />
             </p>
           </Col>
         </Row>
@@ -65,7 +66,7 @@ export default function NavBar() {
                 <Nav.Link href="/services">
                   <h3>Palvelut</h3>
                 </Nav.Link>
-                <Nav.Link href="/shop">
+                <Nav.Link href="/shop" >
                   <h3>Verkkokauppa</h3>
                 </Nav.Link>
                 <Nav.Link href="/about">

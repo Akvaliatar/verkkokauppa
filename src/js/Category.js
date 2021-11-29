@@ -3,13 +3,15 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import DogandCat from "../img/dogandcat.jpg";
+import DogandCat from '../img/dogandcat.jpg';
+import { Link } from 'react-router-dom';
 
-export default function Details(props) {
-  const URL = "http://localhost/kotielainpuisto/products/getproducts.php/";
-  let PRODUCT = URL + props.trnro;
-  const [item, setItem] = useState([]);
-  let productPicture = "https://koulu-b8d54.web.app/" + item.tuotenro;
+export default function Details (props,{addToCart}) {
+
+  const URL = "http://localhost/kotielainpuisto/products/getproducts.php/"
+  let PRODUCT = URL + props.trnro
+  const [item, setItem] = useState([])
+  let productPicture =  "https://koulu-b8d54.web.app/" + item.tuotenro
 
   useEffect(() => {
     axios
@@ -21,6 +23,30 @@ export default function Details(props) {
         alert(error.response ? error.response.data.error : error);
       });
   }, []);
+
+  {/* ostoskoriin tuotteen lisääminen */ }
+  const [category, setCategory] = useState(null);
+  const [cart, setCart] = useState([]);
+  useEffect(() => {
+    if ('cart' in localStorage){
+      setCart(JSON.parse(localStorage.getItem('cart')));
+    }
+  },[])
+
+  function addToCart(product){
+    const newCart = [...cart,product];
+    setCart(newCart);
+    localStorage.setItem('cart',JSON.stringify(cart));
+  }
+
+  function updateAmount(amount,product) {
+    product.amount = amount;
+    const index = cart.findIndex((item => item.id === product.id));
+    const modifiedCart = Object.assign([...cart],{[index]:product});
+    setCart(modifiedCart);
+    localStorage.setItem('cart',JSON.stringify(modifiedCart));
+  }
+
 
   return (
     <div>
@@ -69,7 +95,46 @@ export default function Details(props) {
             </Card.Body>
           </Card>
         </div>
+<<<<<<< HEAD
       ))}
     </div>
   );
+=======
+        
+        {/* Tämä näyttää halutun kategorian tiedot. Vielä puuttuu oleellisia tietoja, esim hinta */}
+        {item?.map(item => (
+          <div key={item.tuotenro}>
+              <Card style={{ width: '18rem', border: " 2px solid #514b3b" }}>
+                <Card.Img variant="top" src={"https://koulu-b8d54.web.app/kissa.jpg"} />
+                <Card.Body style={{ background: "#a8ae8a" }}>
+                  <Card.Title><p>{item.tuotenimi}</p></Card.Title>
+                  <Card.Text>
+                    <p>testi</p>
+                  </Card.Text>
+                  <div className="buttonToCenter" >
+                    <button className="webShopButton">Lisätietoja
+                    <Link
+                      to={{
+                        pathname:'/product',
+                        state: {
+                          id:item.tuotenro,
+                          name:item.tuotenimi,
+                          price:item.hinta,
+                        }
+                      }}>
+                        {item.name}
+                    </Link>
+                    </button>
+                  </div>
+                  <div className="buttonToCenter" >
+                  <button className="webShopButton" onClick={e => addToCart(item)}>Lisää ostoskoriin</button>
+                </div>
+                </Card.Body>
+              </Card>
+   
+          </div>
+        ))}
+</div>
+  )
+>>>>>>> 2bcd75f94bf14eb9362819002171955c4c41dca3
 }
