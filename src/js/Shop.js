@@ -1,29 +1,30 @@
-import { useEffect, useState } from "react";
+import React,{ useEffect, useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import DogandCat from '../img/dogandcat.jpg';
 import Logo from '../img/logo.png';
 import axios from "axios"
-import Category from "./Category";
 
-export default function Shop() {
+export default function Shop({url, category}) {
 
   {/* getcategories php ja axios kategorioiden hakuuns */ }
-  const CATEGORY = "http://localhost/kotielainpuisto/products/getcategories.php"
-  const [item, setItem] = useState([])
-  const [selectedItem, setSelectedItem] = useState(null)
+
+  const [categories, setCategories] = useState([])
 
   useEffect(() => {
-    axios.get(CATEGORY)
+    console.log(category)
+    axios.get(url + "/products/getcategories.php/")
       .then((response) => {
-        setItem(response.data)
+        const json = response.data
+        setCategories(json)
       }).catch(error => {
-        alert(error.response ? error.response.data.error : error);
+        if (error.response === undefined) {
+          alert(error)
+        } else {
+          alert(error.response.data.error)
+        }
       })
   }, [])
-
-  function close() {
-    setSelectedItem(null)
-  }
 
   {/* scroll button */ }
   const [showButton, setShowButton] = useState(false);
@@ -45,18 +46,6 @@ export default function Shop() {
     });
   };
 
-
-
-  if (selectedItem != null) {
-    return (
-      <Category
-        trnro={selectedItem.trnro}
-        trnimi={selectedItem.trnimi}
-        teksti={selectedItem.teksti}
-        close={close}
-      ></Category>
-    )
-  } else {
     return (
       <Container className="shopContainer">
         <Row>
@@ -69,17 +58,29 @@ export default function Shop() {
         </Row>
 
         {/* kategorioiden haku backendistä */}
-        {item?.map(item => (
-          <div key={item.trnro}>
+        {categories?.map(category => (
+          <div key={category.trnro}>
             <Card style={{ width: '18rem', border: " 2px solid #514b3b" }}>
               <Card.Img variant="top" src={DogandCat} />
               <Card.Body style={{ background: "#a8ae8a" }}>
-                <Card.Title><p>{item.trnimi}</p></Card.Title>
+                <Card.Title><p>{category.trnimi}</p></Card.Title>
                 <Card.Text>
-                  <p>{item.teksti}</p>
+                  <p>{category.teksti}</p>
                 </Card.Text>
                 <div className="buttonToCenter" >
-                  <button className="webShopButton" onClick={e => setSelectedItem(item)}>Katso lisää</button>
+                  <button className="webShopButton" >
+                    <Link 
+                      to={{
+                        pathname: "/category",
+                        state: {
+                          trnro: category.trnro,
+                          trnimi: category.trnimi,
+                          teksti: category.teksti
+                        }
+                      }}>
+                      Katso lisää
+                    </Link>
+                  </button>
                 </div>
               </Card.Body>
             </Card>
@@ -111,4 +112,3 @@ export default function Shop() {
       </Container>
     )
   }
-}

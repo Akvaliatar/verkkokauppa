@@ -1,11 +1,12 @@
 import React from 'react'
 import './css/App.css'
-import { Switch, Route } from "react-router-dom"
+import { Switch, Route, useLocation } from "react-router-dom"
 import { useEffect, useState } from "react";
 import Home from "./js/Home"
 import AboutUs from "./js/AboutUs"
 import Services from "./js/Services"
 import Shop from "./js/Shop"
+import Category from "./js/Category"
 import Product from './js/Product'
 import About from "./js/About"
 import NotFound from "./js/NotFound"
@@ -16,9 +17,18 @@ import Footer from "./js/Footer"
 const URL = "http://localhost/kotielainpuisto"
 
 function App () {
+  const [category, setCategory] = useState(1)
+    
+  let location = useLocation()
+
+  useEffect(()=> {
+    if (location.state !== undefined) {
+      setCategory({trnro: location.state.trnro,trnimi: location.state.trnimi,teksti: location.state.teksti})
+    }
+  }, [location.state])
 
       {/* ostoskoriin tuotteen lisääminen */ }
-      const [category, setCategory] = useState(null);
+
       const [cart, setCart] = useState([]);
       useEffect(() => {
         if ('cart' in localStorage){
@@ -43,8 +53,7 @@ function App () {
 
   return (
     <>
-    
-    <Navbar url={URL} setCategory={setCategory} cart={cart} />
+    <Navbar url={URL} cart={cart} />
     <div>
     <Switch>
       <Route
@@ -68,6 +77,14 @@ function App () {
       <Route
         path="/shop" render={() =>
         <Shop
+          url={URL}
+          category={category}
+          addToCart={addToCart} /> 
+        }
+      />
+      <Route
+        path="/category" render={() =>
+        <Category
           url={URL}
           category={category}
           addToCart={addToCart} /> 
