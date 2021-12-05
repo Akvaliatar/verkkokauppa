@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/navbar.css";
 import { Link } from "react-router-dom";
-import { Container, Row, Col, Button, Nav, Navbar, DropdownButton, ButtonGroup } from "react-bootstrap";
+import { Container, Row, Col, Nav, Navbar } from "react-bootstrap";
 import Logo from "../img/logo.png";
 import Cart from "./Cart";
 
@@ -37,7 +37,7 @@ export default function NavBar({url, setCategory, cart}) {
           </Col>
           <Col xs={6} md={2}>
             <figure>
-              <Link to="">
+              <Link to="/">
                 <img src={Logo} />
               </Link>
             </figure>
