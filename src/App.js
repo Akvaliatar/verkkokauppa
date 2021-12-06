@@ -54,7 +54,7 @@ function App () {
       function addToCart(product){
         const newCart = [...cart,product];
         setCart(newCart);
-        localStorage.setItem('cart',JSON.stringify(cart));
+        localStorage.setItem('cart',JSON.stringify(newCart));
       }
 
       function updateAmount(amount,product) {

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import DogandCat from "../img/dogandcat.jpg";
 
+
 export default function Products({ url, category, addToCart }) {
   const [products, setProducts] = useState([]);
 
@@ -99,7 +100,7 @@ export default function Products({ url, category, addToCart }) {
                   <div className="buttonToCenter">
                     <button
                       className="webShopButton"
-                      onClick={(e) => addToCart(item)}
+                      onClick={(e) => addToCart(product)}
                     >
                       Lisää ostoskoriin
                     </button>
