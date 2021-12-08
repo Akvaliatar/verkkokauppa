@@ -1,4 +1,61 @@
 /*navigointi takaisin tuoteryhmiin tai tuoteryhmään (näyttää myös nimeltä valitun tuotenäkymän tuotteen)*/
 .navigointi {
     width: 100%;
+    background-color: #a8ae8a5e;
+}
+.navigointi h2 {
+    text-align: left;
+}
+/*tuotteen nimi ja alustava hinta sekä formin h1*/
+.profiili h1, .form-tiedot h1 {
+    color: #a8ae8a;
+}
+.carousel {
+    margin: 0.5em;
+    background-color: #a8ae8a;
+}
+.carousel.item{
+    background-color: rgb(18, 168, 168);
+    max-width: 3em;
+    max-height: 3em;
+}
+/*form-input*/
+.input-loota td{
+    margin: 0 5% 0 5%;
+    width: 100%;
+    height: 4em;
+}
+.input-loota h2{
+    text-align: left;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+input {
+    text-align: left;
+    width: 5em;
+    padding-left: 0.5em;
+    color: #514B3B;
+    border: 2px solid #a8ae8a38;
+    border-radius: 10px;
+    background-color: #a8ae8a38;
+}
+input:hover {
+    background-color: #ffffff;
+}
+/*form-btn*/
+.btn_loota {
+    margin: 1em;
+    width: 100%;
+    text-align: center;
+}
+button {
+    background-color: #a8ae8a;
+    border: none;
+    padding: 0 2em 0.5em 2em;
+}
+button h1 {
+    padding-top: 0.4em;
+}
+button:hover {
+    background-color: #a8ae8aa9;
 }
