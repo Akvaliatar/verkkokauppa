@@ -9,6 +9,7 @@ import Category from "./js/Category"
 import Product from './js/Product'
 import About from "./js/About"
 import NotFound from "./js/NotFound"
+import Order from "./js/Order"
 import Navbar from "./js/Navbar"
 import Footer from "./js/Footer"
 
@@ -16,16 +17,10 @@ import Footer from "./js/Footer"
 const URL = "http://localhost/kotielainpuisto"
 
 function App () {
-  const [category, setCategory] = useState(1)
-  const [product, setProduct] = useState(1)
+  const [category, setCategory] = useState(0)
+  const [product, setProduct] = useState(0)
     
   let location = useLocation()
-
-  useEffect(()=> {
-    if (location.state !== undefined) {
-      setCategory({trnro: location.state.trnro,trnimi: location.state.trnimi,teksti: location.state.teksti})
-    }
-  }, [location.state])
 
   useEffect(()=> {
     if (location.state !== undefined) {
@@ -52,9 +47,15 @@ function App () {
       },[])
     
       function addToCart(product){
-        const newCart = [...cart,product];
-        setCart(newCart);
-        localStorage.setItem('cart',JSON.stringify(newCart));
+        if (cart.some(item => item.tuotenro === product.tuotenro)) {
+          const existingProduct = cart.filter(item => item.tuotenro === product.tuotenro)
+          updateAmount(parseInt(existingProduct[0].amount) + 1, product)
+        } else {
+          product["amount"] = 1;
+          const newCart = [...cart,product];
+          setCart(newCart);
+          localStorage.setItem('cart',JSON.stringify(newCart));
+        }
       }
 
       function updateAmount(amount,product) {
@@ -74,26 +75,29 @@ function App () {
       <Route
         path="/" render={() =>
         <Home
-          url={URL}/> 
+          url={URL}
+          /> 
         } exact
       />
       <Route
         path="/aboutus" render={() =>
         <AboutUs
-          url={URL}/> 
+          url={URL}
+          /> 
         } exact
       />
       <Route
         path="/services" render={() =>
         <Services
-          url={URL}/> 
+          url={URL}
+          /> 
         } exact
       />
       <Route
         path="/shop" render={() =>
         <Shop
           url={URL}
-          category={category}
+          
           addToCart={addToCart} /> 
         }
       />
@@ -109,7 +113,7 @@ function App () {
         path="/product" render={() =>
         <Product
           url={URL}
-          category={category}
+          
           product={product}
           cart={cart}
           addToCart={addToCart}
@@ -119,7 +123,16 @@ function App () {
       <Route
         path="/about" render={() =>
         <About
-          url={URL}/> 
+          url={URL}
+          /> 
+        } exact
+      />
+      <Route
+        path="/order" render={() =>
+        <Order
+        cart={cart}
+        
+        updateAmount={updateAmount}/> 
         } exact
       />
       <Route component={NotFound} />

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Cart({cart}) {
     return (
-        <Link>
+        <Link to="/order" >
             <p className="ostoskori">
               <BsCart4 size={38} />
             </p>

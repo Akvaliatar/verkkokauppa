@@ -29,30 +29,7 @@ export default function Products({ url, category, addToCart }) {
       });
   }, [category]);
 
-  {
-    /* ostoskoriin tuotteen lisääminen */
-  }
-
-  const [cart, setCart] = useState([]);
-  useEffect(() => {
-    if ("cart" in localStorage) {
-      setCart(JSON.parse(localStorage.getItem("cart")));
-    }
-  }, []);
-
-  function addToCart(product) {
-    const newCart = [...cart, product];
-    setCart(newCart);
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }
-
-  function updateAmount(amount, product) {
-    product.amount = amount;
-    const index = cart.findIndex((item) => item.id === product.id);
-    const modifiedCart = Object.assign([...cart], { [index]: product });
-    setCart(modifiedCart);
-    localStorage.setItem("cart", JSON.stringify(modifiedCart));
-  }
+  
 
   return (
     <Container fluid className="mx-auto h-100">
@@ -80,6 +57,7 @@ export default function Products({ url, category, addToCart }) {
                   </Card.Title>
                   <Card.Text>
                     <p>testi</p>
+                    <p>{product.hinta}</p>
                   </Card.Text>
                   <div className="buttonToCenter">
                     <button className="webShopButton">
@@ -90,6 +68,7 @@ export default function Products({ url, category, addToCart }) {
                             id: product.tuotenro,
                             name: product.tuotenimi,
                             price: product.hinta,
+                            amount: product.amount
                           },
                         }}
                       >
