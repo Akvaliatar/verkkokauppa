@@ -17,8 +17,8 @@ import Footer from "./js/Footer"
 const URL = "http://localhost/kotielainpuisto"
 
 function App () {
-  const [category, setCategory] = useState(0)
-  const [product, setProduct] = useState(0)
+  const [category, setCategory] = useState(null)
+  const [product, setProduct] = useState(null)
     
   let location = useLocation()
 
@@ -29,9 +29,10 @@ function App () {
       } else if (location.pathname === "/product") {
         setProduct({
           tuotenro: location.state.tuotenro, tuotenimi: location.state.tuotenimi,
-          trnro: location.state.trnro, hinta: location.state.hinta, kustannus: location.state.kustannus,
-          trnro: location.state.trnro, vari: location.state.vari, maara: location.state.maara, 
-          koko: location.state.koko, lankaTyyppiEläin: location.state.lankaTyyppiEläin, pituus: location.state.pituus
+          trnro: location.state.trnro, hinta: location.state.hinta,
+          vari: location.state.vari, maara: location.state.maara, 
+          koko: location.state.koko, lankaTyyppiEläin: location.state.lankaTyyppiEläin,
+          pituus: location.state.pituus
         })
       }
     }
@@ -113,7 +114,7 @@ function App () {
         path="/product" render={() =>
         <Product
           url={URL}
-          
+          category={category}
           product={product}
           cart={cart}
           addToCart={addToCart}

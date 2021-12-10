@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect } from "react";
 import "../css/product.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -17,6 +17,10 @@ export default function Product({
   updateAmount,
   product,
 }) {
+  useEffect(() => {
+    console.log(product);
+  }, [product]);
+
   return (
     <Container fluid className="mx-auto">
       <Row>
@@ -24,9 +28,9 @@ export default function Product({
           <h2>
             Tuotteet
             <IoIosArrowForward />
-            Kategoria {category?.trnimi}
+            {category?.trnimi}
             <IoIosArrowForward />
-            Tuote {product?.tuotenimi}
+            {product?.tuotenimi}
           </h2>
         </Col>
       </Row>
@@ -34,8 +38,8 @@ export default function Product({
         {/* ^ onSubmit={ }*/}
         <Row>
           <Col md={4} lg={4} className="profiili">
-            <h1>Tuote {product?.tuotenimi}</h1>
-            <h1>hinta {product?.tuotenimi}</h1>
+            <h1>{product?.tuotenimi}</h1>
+            <h1>{product?.maara}</h1>
             <p>tietoa tuotteesta.............</p>
           </Col>
           <Col md={4} lg={4}>
@@ -46,44 +50,53 @@ export default function Product({
             </Carousel>
           </Col>
           <Col md={4} lg={4} className="form-tiedot">
-            <h1>Hinta {product?.hinta} € / kpl </h1>
+            <h1>{product?.hinta} € / kpl </h1>
             <div className="input-loota">
-              <tr>
-                <td>
-                  <h2>Väri:</h2>
-                </td>
-                <td>
-                  <input list="colours" name="colour"></input>
-                  <datalist id="colours">
-                    <option value="suoraan tietokannasta" />
-                  </datalist>
-                </td>
-              </tr>
+              <table>
+                <tr>
+                  <td>
+                    <h2>Väri:</h2>
+                  </td>
+                  <td>
+                    <input list="colours" name="colour"></input>
+                    <datalist id="colours">
+                      <option value="suoraan tietokannasta" />
+                    </datalist>
+                  </td>
+                </tr>
+              </table>
             </div>
             <div className="input-loota">
-              <tr>
-                <td>
-                  <h2>Koko:</h2>
-                </td>
-                <td>
-                  <input list="sizes" name="size" placeholder="S" />
-                  <datalist id="sizes">
-                    <option value="S" />
-                    <option value="M" />
-                    <option value="L" />
-                  </datalist>
-                </td>
-              </tr>
+              <table>
+                <tr>
+                  <td>
+                    <h2>Koko:</h2>
+                  </td>
+                  <td>
+                    <input list="sizes" name="size" placeholder="S" />
+                    <datalist id="sizes">
+                      <option value={product?.koko} />
+                    </datalist>
+                  </td>
+                </tr>
+              </table>
             </div>
             <div className="input-loota">
-              <tr>
-                <td>
-                  <h2>Kpl:</h2>
-                </td>
-                <td>
-                  <input type="number" min="1" max="99" placeholder="0"></input>
-                </td>
-              </tr>
+              <table>
+                <tr>
+                  <td>
+                    <h2>Kpl:</h2>
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      min="1"
+                      max="99"
+                      placeholder="0"
+                    ></input>
+                  </td>
+                </tr>
+              </table>
             </div>
           </Col>
         </Row>

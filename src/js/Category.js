@@ -2,19 +2,16 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import '../css/category.css'
 import { Link } from "react-router-dom";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import DogandCat from "../img/dogandcat.jpg";
-
+import { Container, Row, Col, Card} from "react-bootstrap";
 
 export default function Products({ url, category, addToCart }) {
   const [products, setProducts] = useState([]);
 
-  const [item, setItem] = useState([]);
   // let productPicture = "https://koulu-b8d54.web.app/" + product.tuotenro
 
   useEffect(() => {
-    console.log(category);
-    axios
+   if(category)
+  {    axios
       .get(url + "/products/getproducts.php/" + category.trnro)
       .then((response) => {
         const json = response.data;
@@ -27,6 +24,7 @@ export default function Products({ url, category, addToCart }) {
           alert(error.response.data.error);
         }
       });
+   }
   }, [category]);
 
   
@@ -65,11 +63,18 @@ export default function Products({ url, category, addToCart }) {
                         to={{
                           pathname: "/product",
                           state: {
-                            id: product.tuotenro,
-                            name: product.tuotenimi,
-                            price: product.hinta,
-                            amount: product.amount
-                          },
+                            tuotenro: product.tuotenro,
+                            tuotenimi: product.tuotenimi,
+                            hinta: product.hinta,
+                            trnro: category.trnro,
+                            vari: product.vari,
+                            maara: product.maara,
+                            koko: product.koko,
+                            lankatyyppi: product.lankaTyyppiEläin,
+                            pituus:product.pituus,
+                            amount: product.amount,
+                            category: category.trnimi
+                          }
                         }}
                       >
                         Lisätietoja
