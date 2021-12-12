@@ -19,6 +19,7 @@ const URL = "http://localhost/kotielainpuisto"
 function App () {
   const [category, setCategory] = useState(null)
   const [product, setProduct] = useState(null)
+  const [cart, setCart] = useState([]);
     
   let location = useLocation()
 
@@ -40,7 +41,7 @@ function App () {
 
       {/* ostoskoriin tuotteen lisääminen */ }
 
-      const [cart, setCart] = useState([]);
+      
       useEffect(() => {
         if ('cart' in localStorage){
           setCart(JSON.parse(localStorage.getItem('cart')));
@@ -59,10 +60,16 @@ function App () {
         }
       }
 
+      function removeFromCart(product) {
+        const itemsWithoutRemoved = cart.filter(item => item.tuotenro !== product.tuotenro)
+        setCart(itemsWithoutRemoved)
+        localStorage.setItem("cart", JSON.stringify(itemsWithoutRemoved))
+      }
+
       function updateAmount(amount,product) {
         product.amount = amount;
-        const index = cart.findIndex((item => item.id === product.id));
-        const modifiedCart = Object.assign([...cart],{[index]:product});
+        const index = cart.findIndex((item => item.tuotenro === product.tuotenro));
+        const modifiedCart = Object.assign([...cart],{[index]: product});
         setCart(modifiedCart);
         localStorage.setItem('cart',JSON.stringify(modifiedCart));
       }
@@ -132,9 +139,9 @@ function App () {
         path="/order" render={() =>
         <Order
         cart={cart}
-        
-        updateAmount={updateAmount}/> 
-        } exact
+        updateAmount={updateAmount}
+        removeFromCart={removeFromCart}/> 
+        }
       />
       <Route component={NotFound} />
     </Switch>
