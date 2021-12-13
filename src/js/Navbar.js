@@ -55,20 +55,35 @@ export default function NavBar({url, setCategory, cart}) {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mx-auto" className="navlinks">
-                <Nav.Link href="/">
-                  <h3>Home</h3>
+                <Nav.Link>
+                  <Link 
+                      to={{pathname: "/"}}>
+                      <h3>Home</h3>
+                  </Link>
                 </Nav.Link>
-                <Nav.Link href="/aboutus">
-                  <h3>Meistä</h3>
+                <Nav.Link>
+                  <Link 
+                      to={{pathname: "/aboutus"}}>
+                      <h3>Meistä</h3>
+                  </Link>
                 </Nav.Link>
-                <Nav.Link href="/services">
-                  <h3>Palvelut</h3>
+                <Nav.Link>
+                  <Link 
+                      to={{pathname: "/services"}}>
+                      <h3>Palvelut</h3>
+                  </Link>
                 </Nav.Link>
-                <Nav.Link href="/shop" >
-                  <h3>Verkkokauppa</h3>
+                <Nav.Link>
+                  <Link 
+                      to={{pathname: "/shop"}}>
+                      <h3>Verkkokauppa</h3>
+                  </Link>
                 </Nav.Link>
-                <Nav.Link href="/about">
-                  <h3>Omat tiedot</h3>
+                <Nav.Link>
+                  <Link 
+                      to={{pathname: "/about"}}>
+                      <h3>Omat tiedot</h3>
+                  </Link>
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
