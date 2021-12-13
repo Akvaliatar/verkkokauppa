@@ -33,16 +33,14 @@ export default function About () {
       <Row>
         <Col xs={{span: 12, order: 1}} lg={{span: 6, order: 1}}  >
           <p>
-            Tilan puhelinaika arkisin on klo 9-16. Viikonloppuisin klo 10-14. Muina aikoina voi laittaa viestiä somen kautta.
-          </p>
-          <p>
-            Tilan puhelinaika arkisin on klo 9-16. Viikonloppuisin klo 10-14. Muina aikoina voi laittaa viestiä somen kautta.
+            Tilan puhelinaika arkisin on klo 9-16. Viikonloppuisin klo 10-14. Muina aikoina voi laittaa
+            viestiä somen kautta.
           </p>
         </Col>
         <Col xs={{span: 12, order: 2}} lg={{span: 6, order: 2}}  >
           <ul className="AboutULElement">
-            <li>puhelinumero 040-14581893</li>
-            <li>sähköposti toivonkotielainpusito@gmail.fi</li>
+            <li>Puhelinumero: +358 66 666 6666</li>
+            <li>Sähköposti: toivonkotielainpuisto@gmail.com</li>
             <li>Instagram&nbsp;
               <a className="aboutPageLinks">
                 <Link to="https://www.instagram.com/toivon_kotielainpuisto/">

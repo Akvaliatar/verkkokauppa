@@ -34,23 +34,23 @@ export default function Home() {
       <Row>
         <Col xs={{span: 12, order: 2}} lg={{span: 6, order: 1}} >
           <p>
-            Toivon kotipuisto sijaitsee Oulun keskustasta n.30 min ajomatkan päästä luonnon keskuudessa 
+            Toivon kotipuisto sijaitsee n.30 min ajomatkan päästä Oulun keskustasta luonnon keskuudessa 
             kauniin  merinäkymän vieressä. Tilalle pääsee helposti myös julkisia käyttäen. 
           </p>
           <p>Verkkosivuillamme pääset tarkistamaan ajankohtaiset tapahtumat, tutkimaan puiston tekemiä
-            tuotteita (mm. alpakan villalankaa, maapähkinäherkkuja koirille ja hunajaa) sekä tilaamaan lippuja
-            puistoon. Kaiken voi myös ostaa lahjaksi!</p>
+            tuotteita (mm. alpakanvillalankaa, maapähkinäherkkuja koirille ja villahuiveja) sekä tilaamaan lippuja
+            puistoon.</p>
           <p>
             Tilalla pääset tutustumaan kiltteihin ja hellyttäviin kotieläimiin, kuten lampaisiin, laamoihin, 
-            lehmiin, poroihin, kissoihin, koiriin, pupuihin, kanoihin, ankkoihin, vuohiin tai jopa hieman 
-            harvinaisempiin eläimiin.
+            lehmiin, kissoihin, koiriin, kaneihin, kanoihin, ankkoihin, vuohiin tai jopa hieman 
+            harvinaisempiin eläimiin kuten poroihin.
           </p>
-          <p>Puistosta löytyy myös eläinten lisäksi muuta toimintaa leikkipuisto perheen pienemmille, missä 
-            on kiipeilyteline ja keinuja. Myös askartelupaja missä pääsee kokeilemaan huovutusta tai maalaamista.
+          <p>Puistosta löytyy myös eläinten lisäksi muuta toimintaa: leikkipuisto perheen pienemmille, missä 
+            on kiipeilyteline ja keinuja, sekä askartelupaja, jossa pääsee kokeilemaan huovutusta tai maalaamista.
           </p>
           <p>
-            Jos nälkä yllättää vieraillessa tilalta löytyy laadukas kahvila, josta saa ostettua erilaisia herkkuja. 
-            Samasta rakennuksesta löytyy myös kotieläinpuiston pieni putiikki, jonka villatuotteet on valmistettu tilan 
+            Jos nälkä yllättää, vieraillessa tilalta löytyy laadukas kahvila, josta saa ostettua erilaisia herkkuja. 
+            Samasta rakennuksesta löytyy myös kotieläinpuiston pieni putiikki, jonka mm. villatuotteet on valmistettu tilan 
             omasta villasta.
           </p>
         </Col>
@@ -65,7 +65,7 @@ export default function Home() {
           <h3>Palvelut</h3>
           <p>
             Tarjoamme monipuolisia palveluita vierailijoille, kuten opastettuja kierroksia, kummitoimintaa eläimille, terapiaa ja
-            monipuolisesti opettavia kursseja. Palveluihin voi tutustua tarkemmin palvelut sivuilta.
+            monipuolisesti opettavia kursseja. Palveluihin voi tutustua tarkemmin Palvelut-sivulta.
           </p>
           <div className="buttonToCenter">
             <button className="seviceButton" ><a href="./Services" >LUE LISÄÄ</a></button>
@@ -81,10 +81,10 @@ export default function Home() {
         <Col xs={{span: 12, order: 2}} lg={{span: 6, order: 1}}>
         <h3>Ajankohtaista</h3>
 
-        <p><b>5.9</b> Koiran koulutus kurssi osa.2</p>
-        <p><b>20.8</b> Villahuovutus kurssi</p>
+        <p><b>5.9</b> Koiran koulutus -kurssi osa 2</p>
+        <p><b>20.8</b> Villahuovutuskurssi</p>
         <p><b>18.7</b> Koiran koulutus kurssi osa.1</p>
-        <p><b>10.7</b> Vaellus retki ponien ja laamojen kanssa</p>
+        <p><b>10.7</b> Vaellusretki ponien ja laamojen kanssa</p>
         <p><b>5.6</b> Avoimet ovet</p>
         </Col>
         <Col xs={{span: 12, order: 1}} lg={{span: 6, order: 1}}>
