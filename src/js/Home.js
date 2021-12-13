@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import DogandCat from '../img/dogandcat.jpg';
 import Chikens from '../img/chikens.jpg';
 import Womanandllama from '../img/womanandllama.jpg';
@@ -68,7 +69,11 @@ export default function Home() {
             monipuolisesti opettavia kursseja. Palveluihin voi tutustua tarkemmin Palvelut-sivulta.
           </p>
           <div className="buttonToCenter">
-            <button className="seviceButton" ><a href="./Services" >LUE LISÄÄ</a></button>
+            <button className="seviceButton" >
+                  <Link 
+                      to={{pathname: "/services"}}>
+                      LUE LISÄÄ
+                  </Link></button>
           </div>
         </Col>
         <Col xs={{span: 12, order: 1}} lg={{span: 6, order: 1}} >

@@ -73,6 +73,11 @@ function App () {
         setCart(modifiedCart);
         localStorage.setItem('cart',JSON.stringify(modifiedCart));
       }
+
+      function emptyCart() {
+        setCart([])
+        localStorage.removeItem("cart")
+      }
   
 
   return (
@@ -141,7 +146,8 @@ function App () {
         <Order
         cart={cart}
         updateAmount={updateAmount}
-        removeFromCart={removeFromCart}/> 
+        removeFromCart={removeFromCart}
+        emptyCart={emptyCart}/> 
         }
       />
       <Route component={NotFound} />

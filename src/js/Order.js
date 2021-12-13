@@ -2,10 +2,13 @@ import React from "react";
 import "../css/order.css";
 import { Container, Row, Col } from "react-bootstrap";
 
-export default function Order({ cart, updateAmount, removeFromCart }) {
+export default function Order({ cart, updateAmount, removeFromCart, emptyCart }) {
+  
   function changeAmount(e, product) {
     updateAmount(e.target.value, product);
   }
+
+  let sum = 0
 
   return (
     <Container fluid className="mx-auto">
@@ -17,12 +20,12 @@ export default function Order({ cart, updateAmount, removeFromCart }) {
           <div className="ostokset">
             <table>
               {cart.map((product) => {
+                sum+=parseFloat(product.price)
                 return (
                   <tr>
                     <td>{product.tuotenimi}</td>
                     <td>{(product.hinta * product.amount).toFixed(2)} €</td>
                     <td>
-                      
                       Määrä:   
                       {" "}
                       <input
@@ -39,6 +42,12 @@ export default function Order({ cart, updateAmount, removeFromCart }) {
                   </tr>
                 );
               })}
+              <tr>
+                <td>{sum.toFixed(2)}</td>
+                <td></td>
+                <td></td>
+                <td><button href="#" onClick={e => emptyCart()}>Tyhjennä ostoskori</button></td>
+              </tr>
             </table>
           </div>
         </Col>
