@@ -26,7 +26,7 @@ export default function Footer() {
                   <a href="">toimitusehdot</a>
                 </li>
                 <li>
-                  <a href="">yhteystiedot</a>
+                  <a href="./About">yhteystiedot</a>
                 </li>
               </ul>
             </div>

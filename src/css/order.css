@@ -1,0 +1,15 @@
+.ostokset {
+    width: 100%;
+    margin: 1em 0 2em 0;
+    border: #a8ae8a solid 3px;
+    border-radius: 10px;
+    background-color: #d9e4a367;
+}
+.ostokset table {
+    width: 100%;
+    margin: 1em;
+}
+.ostokset td {
+    text-align: left;
+    color: #514B3B;
+}
