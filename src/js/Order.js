@@ -22,8 +22,9 @@ export default function Order({ cart, updateAmount, removeFromCart }) {
                     <td>{product.tuotenimi}</td>
                     <td>{(product.hinta * product.amount).toFixed(2)} €</td>
                     <td>
+                      
+                      Määrä:   
                       {" "}
-                      Määrä:
                       <input
                         type="number"
                                 step="1"
@@ -33,7 +34,7 @@ export default function Order({ cart, updateAmount, removeFromCart }) {
                       />
                     </td>
                     <td>
-                      <a onClick={() => removeFromCart(product)}>Poista</a>
+                      <button onClick={() => removeFromCart(product)}>Poista</button>
                     </td>
                   </tr>
                 );

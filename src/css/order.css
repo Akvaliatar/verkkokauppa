@@ -13,3 +13,7 @@
     text-align: left;
     color: #514B3B;
 }
+
+button {
+    border-radius: 10px;
+}
