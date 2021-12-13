@@ -114,6 +114,7 @@ function App () {
         <Category
           url={URL}
           category={category}
+          product={product}
           addToCart={addToCart} /> 
         }
       />

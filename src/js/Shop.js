@@ -1,8 +1,6 @@
 import React,{ useEffect, useState } from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card} from "react-bootstrap";
 import { Link } from "react-router-dom";
-import DogandCat from '../img/dogandcat.jpg';
-import Logo from '../img/logo.png';
 import axios from "axios"
 
 export default function Shop({url, category}) {
@@ -61,7 +59,7 @@ export default function Shop({url, category}) {
         {categories?.map(category => (
           <div key={category.trnro}>
             <Card style={{ width: '18rem', border: " 2px solid #514b3b" }}>
-              <Card.Img variant="top" src={DogandCat} />
+              <Card.Img variant="top" src={"https://koulu-b8d54.web.app/" + category.trnimi + ".svg"} />
               <Card.Body style={{ background: "#a8ae8a" }}>
                 <Card.Title><p>{category.trnimi}</p></Card.Title>
                 <Card.Text>
@@ -92,23 +90,6 @@ export default function Shop({url, category}) {
             &#8679;
           </button>
         )}
-
-        <Row>
-          <Col xs={{ span: 12, order: 6 }} md={{ span: 6, order: 6 }} lg={{ span: 4, order: 6 }} >
-            <Card >
-              <Card.Img variant="top" src={Logo} />
-              <Card.Body>
-                <Card.Title>Kaikki tuottet</Card.Title>
-                <Card.Text>
-                  Täältä löydät kaikki myytävänä olevat tuoteet helposti.
-                </Card.Text>
-                <div className="buttonToCenter" >
-                  <button className="webShopButton">Katso lisää</button>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
       </Container>
     )
   }

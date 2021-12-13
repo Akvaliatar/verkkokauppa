@@ -4,10 +4,10 @@ import '../css/category.css'
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Card} from "react-bootstrap";
 
-export default function Products({ url, category, addToCart }) {
+export default function Products({ url, category, addToCart, product }) {
   const [products, setProducts] = useState([]);
 
-  // let productPicture = "https://koulu-b8d54.web.app/" + product.tuotenro
+  let pääte = ""
 
   useEffect(() => {
    if(category)
@@ -27,7 +27,11 @@ export default function Products({ url, category, addToCart }) {
    }
   }, [category]);
 
-  
+  if (category?.trnro == 5) {
+    pääte = ".jpg"
+  } else {
+    pääte = ".svg"
+  }
 
   return (
     <Container fluid className="mx-auto h-100">
@@ -47,14 +51,14 @@ export default function Products({ url, category, addToCart }) {
               <Card style={{ width: "18rem", border: " 2px solid #514b3b" }}>
                 <Card.Img
                   variant="top"
-                  src={"https://koulu-b8d54.web.app/kissa.jpg"}
+                  src={"https://koulu-b8d54.web.app/" + product.tuotenimi + pääte}
                 />
                 <Card.Body style={{ background: "#a8ae8a" }}>
                   <Card.Title>
                     <p>{product.tuotenimi} {product.maara}</p>
                   </Card.Title>
                   <Card.Text>
-                    <p>testi</p>
+                    <p>{product.teksti}</p>
                     <p>{product.hinta}</p>
                   </Card.Text>
                   <div className="buttonToCenter">
@@ -73,6 +77,7 @@ export default function Products({ url, category, addToCart }) {
                             lankatyyppi: product.lankaTyyppiEläin,
                             pituus:product.pituus,
                             amount: product.amount,
+                            teksti: product.teksti,
                             category: category.trnimi
                           }
                         }}
