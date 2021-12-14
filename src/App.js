@@ -9,6 +9,7 @@ import Category from "./js/Category"
 import Product from './js/Product'
 import About from "./js/About"
 import NotFound from "./js/NotFound"
+import Maintenance from "./js/maintenance"
 import Order from "./js/Order"
 import Navbar from "./js/Navbar"
 import Footer from "./js/Footer"
@@ -150,7 +151,15 @@ function App () {
         emptyCart={emptyCart}/> 
         }
       />
+      <Route
+        path="/maintenance" render={() =>
+        <Maintenance
+          url={URL}
+          /> 
+        } exact
+      />
       <Route component={NotFound} />
+      
     </Switch>
     </div>
     <Footer />

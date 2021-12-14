@@ -1,9 +1,15 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import "../css/order.css";
 import { Container, Row, Col } from "react-bootstrap";
 
 export default function Order({ cart, updateAmount, removeFromCart, emptyCart }) {
-  
+  const [asEtu, setAsEtu] = useState("")
+  const [asSuku, setAsSuku] = useState("")
+  const [postinro, setPostinro] = useState("")
+  const [postitmp, setPostitmp] = useState("")
+  const [puh, setPuh] = useState("")
+  const [sposti, setSposti] = useState("")
+
   function changeAmount(e, product) {
     updateAmount(e.target.value, product);
   }
@@ -49,6 +55,36 @@ export default function Order({ cart, updateAmount, removeFromCart, emptyCart })
                 <td><button href="#" onClick={e => emptyCart()}>Tyhjennä ostoskori</button></td>
               </tr>
             </table>
+
+            <form>
+              <div>
+                <label>Etunimi: </label>
+                <input className="form-control" onChange={e => setAsEtu(e.target.value)} />
+              </div>
+              <div>
+                <label>Sukunimi: </label>
+                <input className="form-control" onChange={e => setAsSuku(e.target.value)} />
+              </div>
+              <div>
+                <label>Postinumero: </label>
+                <input className="form-control" onChange={e => setPostinro(e.target.value)} />
+              </div>
+              <div>
+                <label>Postitoimipaikka: </label>
+                <input className="form-control" onChange={e => setPostitmp(e.target.value)} />
+              </div>
+              <div>
+                <label>Puhelinnumero: </label>
+                <input className="form-control" onChange={e => setPuh(e.target.value)} />
+              </div>
+              <div>
+                <label>Sähköposti: </label>
+                <input className="form-control" onChange={e => setSposti(e.target.value)} />
+              </div>
+              <div>
+                <button>Tilaa</button>
+              </div>
+            </form>
           </div>
         </Col>
       </Row>

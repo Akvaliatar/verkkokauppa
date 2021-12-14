@@ -28,6 +28,12 @@ export default function Footer() {
                 <li>
                   <a href="./About">yhteystiedot</a>
                 </li>
+                <li>
+                  <Link 
+                      to={{pathname: "/maintenance"}}>
+                      <a>ylläpito</a>
+                  </Link>
+                </li>
               </ul>
             </div>
           </Col>
