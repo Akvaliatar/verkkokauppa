@@ -6,6 +6,8 @@ import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
 import { IoIosArrowForward } from "react-icons/io";
 import Logo from "../img/logo.png";
+import Duck from "../img/duck.svg";
+import Lippu from "../img/avainlippu.png";
 
 /*hinta x kpl tulostetaan lomakkeen painikkeeseen, mutta php:ta
  käyttävä laskenta on erikseen.*/
@@ -15,8 +17,15 @@ export default function Product({
   category,
   addToCart,
   updateAmount,
-  product,
+  product
 }) {
+  let pääte = ""
+  if (category?.trnro == 5) {
+    pääte = ".jpg"
+  } else {
+    pääte = ".svg"
+  }
+
   useEffect(() => {
     console.log(product);
   }, [product]);
@@ -34,18 +43,17 @@ export default function Product({
           </h2>
         </Col>
       </Row>
-      <form onSubmit={addToCart}>
+      <form onClick={(e) => addToCart(product)}>
         {/* ^ onSubmit={ }*/}
         <Row>
           <Col md={4} lg={4} className="profiili">
             <h1>{product?.tuotenimi}</h1>
             <h1>{product?.maara}</h1>
-            <p>tietoa tuotteesta.............</p>
           </Col>
           <Col md={4} lg={4}>
             <Carousel>
               <Carousel.Item interval={1500}>
-                <img className="d-block w-100" src={Logo} />
+                <img className="d-block w-100" src={"https://koulu-b8d54.web.app/" + product?.tuotenimi + pääte}/>
               </Carousel.Item>
             </Carousel>
           </Col>
@@ -105,7 +113,7 @@ export default function Product({
             <div className="btn_loota">
               <button>
                 <h1>OSTOSKORIIN</h1>
-                <h2>numero kpl = hinta €</h2>
+                <h2> kpl, €</h2>
               </button>
             </div>
           </Col>
@@ -113,17 +121,18 @@ export default function Product({
       </form>
       <Row>
         <Col xs={3}>
-          <p>tähän tulee svg-homma</p>
+          <figure className="duckSvg">
+           <img src={Duck} />  
+          </figure>
         </Col>
         <Col xs={6}>
           <h1>Tuotetiedot:</h1>
-          <p>
-            ........................................
-            ........................................
-          </p>
+          <p>{product?.teksti}</p>
         </Col>
         <Col xs={3}>
-          <p>tähän toinen kuva</p>
+          <figure>
+           <img className="lippu" src={Lippu} />  
+          </figure>
         </Col>
       </Row>
     </Container>

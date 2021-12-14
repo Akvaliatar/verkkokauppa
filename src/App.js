@@ -35,7 +35,7 @@ function App () {
           trnro: location.state.trnro, hinta: location.state.hinta,
           vari: location.state.vari, maara: location.state.maara, 
           koko: location.state.koko, lankaTyyppiEläin: location.state.lankaTyyppiEläin,
-          pituus: location.state.pituus
+          pituus: location.state.pituus, teksti: location.state.teksti
         })
       }
     }

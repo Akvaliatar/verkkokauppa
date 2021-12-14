@@ -189,6 +189,7 @@ a:hover, a:active {
 /*category-sivun h2*/
 .categoryCard h2 {
   font-size: 1.4em;
+  color: #FFF;
 }
 /*category-sivun ostoskoripainike*/
 .webShopAddBtn {

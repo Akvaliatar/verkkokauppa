@@ -59,3 +59,15 @@ button h1 {
 button:hover {
     background-color: #a8ae8aa9;
 }
+.duckSvg {
+    margin: 1em;
+    width: 100%;
+}
+.duckSvg img {
+    text-align: center;
+    transform: scaleX(-1);
+}
+.lippu {
+    height: 60%;
+    width: 60%;
+}
