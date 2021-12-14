@@ -43,7 +43,7 @@ export default function Order({ cart, updateAmount, removeFromCart, emptyCart })
                       />
                     </td>
                     <td>
-                      <button onClick={() => removeFromCart(product)}>Poista</button>
+                      <button className="delete-btn" onClick={() => removeFromCart(product)}>Poista</button>
                     </td>
                   </tr>
                 );
@@ -52,11 +52,11 @@ export default function Order({ cart, updateAmount, removeFromCart, emptyCart })
                 <td>{sum.toFixed(2)}</td>
                 <td></td>
                 <td></td>
-                <td><button href="#" onClick={e => emptyCart()}>Tyhjennä ostoskori</button></td>
+                <td><button className="delete-btn" href="#" onClick={e => emptyCart()}>Tyhjennä ostoskori</button></td>
               </tr>
             </table>
 
-            <form>
+            <form className="order-form">
               <div>
                 <label>Etunimi: </label>
                 <input className="form-control" onChange={e => setAsEtu(e.target.value)} />
@@ -81,7 +81,7 @@ export default function Order({ cart, updateAmount, removeFromCart, emptyCart })
                 <label>Sähköposti: </label>
                 <input className="form-control" onChange={e => setSposti(e.target.value)} />
               </div>
-              <div>
+              <div className="order-btn">
                 <button>Tilaa</button>
               </div>
             </form>
