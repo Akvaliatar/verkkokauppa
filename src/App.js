@@ -9,7 +9,8 @@ import Category from "./js/Category"
 import Product from './js/Product'
 import About from "./js/About"
 import NotFound from "./js/NotFound"
-import Maintenance from "./js/maintenance"
+import MaintenanceC from "./js/maintenanceC"
+import MaintenanceP from "./js/maintenanceP"
 import Order from "./js/Order"
 import Navbar from "./js/Navbar"
 import Footer from "./js/Footer"
@@ -152,11 +153,18 @@ function App () {
         }
       />
       <Route
-        path="/maintenance" render={() =>
-        <Maintenance
+        path="/maintenanceC" render={() =>
+        <MaintenanceC
           url={URL}
           /> 
-        } exact
+        }
+      />
+      <Route
+        path="/maintenanceP" render={() =>
+        <MaintenanceP
+          url={URL}
+          /> 
+        }
       />
       <Route component={NotFound} />
       

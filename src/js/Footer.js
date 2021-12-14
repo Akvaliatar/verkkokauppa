@@ -30,8 +30,14 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link 
-                      to={{pathname: "/maintenance"}}>
-                      <a>ylläpito</a>
+                      to={{pathname: "/maintenanceC"}}>
+                      <a>ylläpito kategoria</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                      to={{pathname: "/maintenanceP"}}>
+                      <a>ylläpito tuote</a>
                   </Link>
                 </li>
               </ul>
