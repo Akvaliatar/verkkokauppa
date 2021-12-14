@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import '../css/category.css'
+import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Card} from "react-bootstrap";
 
@@ -48,18 +48,17 @@ export default function Products({ url, category, addToCart, product }) {
           {products?.map((product) => (
             <div key={product.tuotenro}>
               <Col xs={12} md={3} lg={2} >
-              <Card style={{ width: "18rem", border: " 2px solid #514b3b" }}>
+              <Card className="categoryCard" style={{ width: "18rem", border: " 2px solid #514b3b" }}>
                 <Card.Img
                   variant="top"
                   src={"https://koulu-b8d54.web.app/" + product.tuotenimi + pääte}
                 />
                 <Card.Body style={{ background: "#a8ae8a" }}>
                   <Card.Title>
-                    <p>{product.tuotenimi} {product.maara}</p>
+                    <h2>{product.tuotenimi} {product.maara}</h2>
                   </Card.Title>
                   <Card.Text>
-                    <p>{product.teksti}</p>
-                    <p>{product.hinta}</p>
+                    <h2>{product.hinta}€</h2>
                   </Card.Text>
                   <div className="buttonToCenter">
                     <button className="webShopButton">
@@ -88,10 +87,10 @@ export default function Products({ url, category, addToCart, product }) {
                   </div>
                   <div className="buttonToCenter">
                     <button
-                      className="webShopButton"
+                      className="webShopAddBtn"
                       onClick={(e) => addToCart(product)}
                     >
-                      Lisää ostoskoriin
+                      Lisää ostoskoriin <BsCart4 size={38} />
                     </button>
                   </div>
                 </Card.Body>

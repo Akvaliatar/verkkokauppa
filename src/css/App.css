@@ -131,11 +131,13 @@ a:hover, a:active {
 
 
 .webShopButton{
+  background-color: #F4EDDA;
   text-align: center;
   margin-bottom: 10%;
   border-style: none;
-  padding: 2%;
+  padding: 0.3em 1em 0.3em 1em;
   font-family: 'Open Sans', sans-serif;
+  font-size: 1.7em;
   color: #514B3B;
   text-align: center;
   text-decoration: none;
@@ -143,10 +145,14 @@ a:hover, a:active {
 
 .webShopButton:hover{
   color: #514B3B;
-  background-color: #a8ae8a;
+  background-color: #d8ccac;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
   text-decoration: none;
+}
+
+.webShopButton a:hover{
+  color: #514B3B;
 }
 
 .webShopButton:active{
@@ -167,7 +173,7 @@ a:hover, a:active {
   text-align: center;
   text-decoration: none;
 }
-
+/*shop- ja category-sivun kortit*/
 .card {
   background: #a8ae8a;
   border: 1px solid #514B3B;
@@ -176,4 +182,35 @@ a:hover, a:active {
   text-align: center;
   margin-bottom: 2rem;
   width: 18rem;
+}
+.card p {
+  padding: 0;
+}
+/*category-sivun h2*/
+.categoryCard h2 {
+  font-size: 1.4em;
+}
+/*category-sivun ostoskoripainike*/
+.webShopAddBtn {
+  background-color: aquamarine;
+}
+.webShopAddBtn {
+  background-color: #fcfcfc5b;
+  text-align: center;
+  margin-bottom: 10%;
+  border-style: none;
+  padding: 0.5em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.7em;
+  color: #FFF;
+  text-align: center;
+  text-decoration: none;
+}
+
+.webShopAddBtn:hover{
+  color: #514B3B;
+  background-color: #ece7d7;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+  text-decoration: none;
 }

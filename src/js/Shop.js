@@ -61,7 +61,7 @@ export default function Shop({url, category}) {
             <Card style={{ width: '18rem', border: " 2px solid #514b3b" }}>
               <Card.Img variant="top" src={"https://koulu-b8d54.web.app/" + category.trnimi + ".svg"} />
               <Card.Body style={{ background: "#a8ae8a" }}>
-                <Card.Title><p>{category.trnimi}</p></Card.Title>
+                <Card.Title><h2>{category.trnimi}</h2></Card.Title>
                 <Card.Text>
                   <p>{category.teksti}</p>
                 </Card.Text>
