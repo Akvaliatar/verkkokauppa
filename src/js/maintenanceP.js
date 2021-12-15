@@ -83,44 +83,44 @@ export default function Maintenance () {
             <h3>Verkkokaupan ylläpito</h3>
             <div>
             <form>
-            <ul>
-                <li>
-                    <label>Uusi tuote</label>
-                    </li>
-                <li>    
+            <tr>
+                <td>
+                    <label>Uusi tuote: </label>
+                    </td>
+                <td>    
                     <input value={tuotenimi} onChange={e => setTuotenimi(e.target.value)} placeholder="nimi"></input>
-                    </li>
-                <li>
+                    </td>
+                <td>
                     <input value={hinta} onChange={e => setHinta(e.target.value)} placeholder="hinta"></input>
-                    </li>
-                <li>
+                    </td>
+                <td>
                     <input value={kustannus} onChange={e => setKustannus(e.target.value)} placeholder="kustannus"></input>
-                </li>
-                <li>
+                </td>
+                <td>
                     <input value={trnro} onChange={e => setTrnro(e.target.value)} placeholder="tuoteryhmän numero"></input>
-                </li>
-                <li>
+                </td>
+                <td>
                     <input value={vari} onChange={e => setVari(e.target.value)} placeholder="väri"></input>
-                </li>
-                <li>
+                </td>
+                <td>
                     <input value={maara} onChange={e => setMaara(e.target.value)} placeholder="määrä"></input>
-                </li>
-                <li>
+                </td>
+                <td>
                     <input value={koko} onChange={e => setKoko(e.target.value)} placeholder="koko"></input>
-                </li>
-                <li>
+                </td>
+                <td>
                     <input value={lankaTyyppiElain} onChange={e => setLankaTyyppiElain(e.target.value)} placeholder="Lankatyyppi"></input>
-                </li>
-                <li>
+                </td>
+                <td>
                     <input value={pituus} onChange={e => setPituus(e.target.value)} placeholder="pituus"></input>
-                </li>
-                <li>
+                </td>
+                <td>
                     <input value={teksti} onChange={e => setTeksti(e.target.value)} placeholder="lisätietoa tuotteesta"></input>
-                </li>
-                <li>
+                </td>
+                <td>
                     <button onClick={save}>lisää tuote</button>
-                </li>
-            </ul>
+                </td>
+            </tr>
         </form>
 
         <ol>

@@ -54,21 +54,22 @@ export default function Maintenance () {
         <h3>Verkkokaupan ylläpito</h3>
         <div>
         <form>
-            <ul>
-                <li>
+            <tr>
+                <td>
                     <label>Uusi tuoteryhmä/kategoria:</label>
-                </li>
-                <li>
+                </td>
+                <td>
                     <input value={trnimi} onChange={e => setTrnimi(e.target.value)} placeholder="tuoteryhmän nimi"></input>
-                </li>
-                <li>
+                </td>
+                <td>
                     <input value={teksti} onChange={e => setTeksti(e.target.value)} placeholder="tuoteryhmän teksti"></input>
-                </li>
-                <li>
+                </td>
+                <td>
                     <button onClick={save}>lisää tuoteryhmä</button>
-                </li>
-            </ul>
+                </td>
+            </tr>
         </form>
+
 
         <ol>
             {item?.map(item => (

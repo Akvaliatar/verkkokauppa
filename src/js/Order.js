@@ -1,10 +1,12 @@
 import { React, useEffect, useState } from "react";
+import axios from "axios";
 import "../css/order.css";
 import { Container, Row, Col } from "react-bootstrap";
 
 export default function Order({ cart, updateAmount, removeFromCart, emptyCart }) {
-  const [asEtu, setAsEtu] = useState("")
-  const [asSuku, setAsSuku] = useState("")
+  const [item, setItem] = useState([])
+  const [asETUnimi, setAsETUnimi] = useState("")
+  const [asSUKUnimi, setAsSUKUnimi] = useState("")
   const [postinro, setPostinro] = useState("")
   const [postitmp, setPostitmp] = useState("")
   const [puh, setPuh] = useState("")
@@ -12,6 +14,27 @@ export default function Order({ cart, updateAmount, removeFromCart, emptyCart })
 
   function changeAmount(e, product) {
     updateAmount(e.target.value, product);
+  }
+
+  function save(e) {
+    e.preventDefault()
+    const json = JSON.stringify({asETUnimi:asETUnimi, asSUKUnimi:asSUKUnimi, postinro:postinro, postitmp:postitmp, puh:puh, sposti:sposti, cart:cart})
+    axios.post(URL + "/order/add", json,{
+      headers: {
+        "Content-Type" : "application/json"
+        }
+    })
+    .then((response) => {
+        setItem(item => [...item,response.data])
+        setAsETUnimi("");
+        setAsSUKUnimi("");
+        setPostinro("");
+        setPostitmp("");
+        setPuh("");
+        setSposti("");
+    }).catch (error => {
+        alert(error.response.data.error)
+    })
   }
 
   let sum = 0
@@ -56,14 +79,14 @@ export default function Order({ cart, updateAmount, removeFromCart, emptyCart })
               </tr>
             </table>
 
-            <form className="order-form">
+            <form className="order-form" onSubmit={save}>
               <div>
                 <label>Etunimi: </label>
-                <input className="form-control" onChange={e => setAsEtu(e.target.value)} />
+                <input className="form-control" onChange={e => setAsETUnimi(e.target.value)} />
               </div>
               <div>
                 <label>Sukunimi: </label>
-                <input className="form-control" onChange={e => setAsSuku(e.target.value)} />
+                <input className="form-control" onChange={e => setAsSUKUnimi(e.target.value)} />
               </div>
               <div>
                 <label>Postinumero: </label>
