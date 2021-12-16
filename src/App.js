@@ -146,6 +146,7 @@ function App () {
       <Route
         path="/order" render={() =>
         <Order
+        url={URL}
         cart={cart}
         updateAmount={updateAmount}
         removeFromCart={removeFromCart}

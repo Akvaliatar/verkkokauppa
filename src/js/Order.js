@@ -3,8 +3,9 @@ import axios from "axios";
 import "../css/order.css";
 import { Container, Row, Col } from "react-bootstrap";
 
-export default function Order({ cart, updateAmount, removeFromCart, emptyCart }) {
+export default function Order({url, cart, updateAmount, removeFromCart, emptyCart }) {
   const [item, setItem] = useState([])
+  const [asID, setAsID] = useState(3)
   const [asETUnimi, setAsETUnimi] = useState("")
   const [asSUKUnimi, setAsSUKUnimi] = useState("")
   const [postinro, setPostinro] = useState("")
@@ -18,14 +19,13 @@ export default function Order({ cart, updateAmount, removeFromCart, emptyCart })
 
   function save(e) {
     e.preventDefault()
-    const json = JSON.stringify({asETUnimi:asETUnimi, asSUKUnimi:asSUKUnimi, postinro:postinro, postitmp:postitmp, puh:puh, sposti:sposti, cart:cart})
-    axios.post(URL + "/order/add", json,{
+    const json = JSON.stringify({asID: asID, asETUnimi:asETUnimi, asSUKUnimi:asSUKUnimi, postinro:postinro, postitmp:postitmp, puh:puh, sposti:sposti, cart:cart})
+    axios.post(url + "/order/add.php", json,{
       headers: {
         "Content-Type" : "application/json"
         }
     })
-    .then((response) => {
-        setItem(item => [...item,response.data])
+    .then(() => {
         setAsETUnimi("");
         setAsSUKUnimi("");
         setPostinro("");
