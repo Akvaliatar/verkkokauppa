@@ -25,6 +25,9 @@ export default function Product({
   } else {
     pääte = ".svg"
   }
+  function changeAmount(e, product) {
+    updateAmount(e.target.value, product);
+  }
 
   useEffect(() => {
     console.log(product);
@@ -120,19 +123,21 @@ export default function Product({
         </Row>
       </form>
       <Row>
-        <Col xs={3}>
-          <figure className="duckSvg">
+        <Col xs={4} md={3}>
+          <div className="duckSvg">
            <img src={Duck} />  
-          </figure>
+          </div>
         </Col>
-        <Col xs={6}>
-          <h1>Tuotetiedot:</h1>
-          <p>{product?.teksti}</p>
+        <Col xs={4} md={6}>
+          <div className="tuotetiedot">
+            <h1>Tuotetiedot:</h1>
+            <p>{product?.teksti}</p>
+          </div>
         </Col>
-        <Col xs={3}>
-          <figure>
+        <Col xs={4} md={3}>
+          <div>
            <img className="lippu" src={Lippu} />  
-          </figure>
+          </div>
         </Col>
       </Row>
     </Container>

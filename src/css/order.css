@@ -10,11 +10,14 @@
     margin: 1em;
 }
 .ostokset td {
-    text-align: left;
     color: #514B3B;
 }
-
+.ostokset h2 {
+    border: #514b3b65 solid 2px;
+    border-radius: 30px;
+}
 .delete-btn {
+    text-align: center;
     margin-right: 1em;
     border-radius: 10px;
     background-color: #7e4531;
@@ -25,6 +28,17 @@
 }
 .delete-btn:hover {
     background-color: #7e4631cc;
+}
+.deletes-btn {
+    text-align: right;
+    margin: 0.3em;
+    padding: 0.5em;
+    color: #fdfffd;
+    background-color: #a04a2b80;
+    border-radius: 10px;
+}
+.deletes-btn:hover {
+    background-color: #ac664c;
 }
 /*tilauslomake*/
 .order-form {

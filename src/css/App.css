@@ -174,19 +174,18 @@ a:hover, a:active {
   text-decoration: none;
 }
 /*shop- ja category-sivun kortit*/
-.card {
-  background: #a8ae8a;
-  border: 1px solid #514B3B;
-  font-family: 'Open Sans', sans-serif;
-  color: #514B3B;
-  text-align: center;
-  margin-bottom: 2rem;
-  width: 18rem;
+.card h2 {
+  font-size: 1.4em;
 }
 .card p {
   padding: 0;
 }
-/*category-sivun h2*/
+.shopCard {
+  height:37rem;
+}
+.categoryCard {
+  margin: 1em;
+}
 .categoryCard h2 {
   font-size: 1.4em;
   color: #FFF;

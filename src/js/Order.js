@@ -71,11 +71,11 @@ export default function Order({ cart, updateAmount, removeFromCart, emptyCart })
                   </tr>
                 );
               })}
+            </table>
+            <table>
               <tr>
-                <td>{sum.toFixed(2)}</td>
-                <td></td>
-                <td></td>
-                <td><button className="delete-btn" href="#" onClick={e => emptyCart()}>Tyhjennä ostoskori</button></td>
+                <td><h2>Loppusumma: {sum.toFixed(2)} €</h2></td>
+                <td><button className="deletes-btn" href="#" onClick={e => emptyCart()}>Tyhjennä ostoskori</button></td>
               </tr>
             </table>
 

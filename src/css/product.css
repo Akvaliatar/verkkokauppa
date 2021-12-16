@@ -62,12 +62,17 @@ button:hover {
 .duckSvg {
     margin: 1em;
     width: 100%;
+    text-align: center;
 }
 .duckSvg img {
-    text-align: center;
     transform: scaleX(-1);
 }
+.tuotetiedot {
+    margin-top: 1em;
+    background-color: #ffffff;
+}
 .lippu {
-    height: 60%;
-    width: 60%;
+    text-align: center;
+    height: 11em;
+    width: 8em;
 }
