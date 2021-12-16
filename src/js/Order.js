@@ -4,14 +4,13 @@ import "../css/order.css";
 import { Container, Row, Col } from "react-bootstrap";
 
 export default function Order({url, cart, updateAmount, removeFromCart, emptyCart }) {
-  const [item, setItem] = useState([])
-  const [asID, setAsID] = useState(3)
   const [asETUnimi, setAsETUnimi] = useState("")
   const [asSUKUnimi, setAsSUKUnimi] = useState("")
   const [postinro, setPostinro] = useState("")
   const [postitmp, setPostitmp] = useState("")
   const [puh, setPuh] = useState("")
   const [sposti, setSposti] = useState("")
+  const [orderDone, setOrderDone] = useState(false)
 
   function changeAmount(e, product) {
     updateAmount(e.target.value, product);
@@ -19,7 +18,7 @@ export default function Order({url, cart, updateAmount, removeFromCart, emptyCar
 
   function save(e) {
     e.preventDefault()
-    const json = JSON.stringify({asID: asID, asETUnimi:asETUnimi, asSUKUnimi:asSUKUnimi, postinro:postinro, postitmp:postitmp, puh:puh, sposti:sposti, cart:cart})
+    const json = JSON.stringify({ asETUnimi:asETUnimi, asSUKUnimi:asSUKUnimi, postinro:postinro, postitmp:postitmp, puh:puh, sposti:sposti, cart:cart})
     axios.post(url + "/order/add.php", json,{
       headers: {
         "Content-Type" : "application/json"
@@ -32,13 +31,15 @@ export default function Order({url, cart, updateAmount, removeFromCart, emptyCar
         setPostitmp("");
         setPuh("");
         setSposti("");
+        emptyCart()
+        setOrderDone(true)
     }).catch (error => {
         alert(error.response.data.error)
     })
   }
 
   let sum = 0
-
+  if (orderDone=== false) {
   return (
     <Container fluid className="mx-auto">
       <Row>
@@ -113,4 +114,8 @@ export default function Order({url, cart, updateAmount, removeFromCart, emptyCar
       </Row>
     </Container>
   );
+  }
+  else {
+    return (<h3>Kiitos tilauksesta</h3>)
+  }
 }
