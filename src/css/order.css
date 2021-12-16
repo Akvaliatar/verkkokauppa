@@ -16,6 +16,18 @@
     border: #514b3b65 solid 2px;
     border-radius: 30px;
 }
+input {
+    text-align: left;
+    width: 5em;
+    padding-left: 0.5em;
+    color: #514B3B;
+    border: 2px solid #a8ae8a38;
+    border-radius: 10px;
+    background-color: #a8ae8a38;
+}
+input:hover {
+    background-color: #ffffff;
+}
 .delete-btn {
     text-align: center;
     margin-right: 1em;

@@ -46,8 +46,7 @@ export default function Product({
           </h2>
         </Col>
       </Row>
-      <form onClick={(e) => addToCart(product)}>
-        {/* ^ onSubmit={ }*/}
+      <div>
         <Row>
           <Col md={4} lg={4} className="profiili">
             <h1>{product?.tuotenimi}</h1>
@@ -62,79 +61,31 @@ export default function Product({
           </Col>
           <Col md={4} lg={4} className="form-tiedot">
             <h1>{product?.hinta} € / kpl </h1>
-            <div className="input-loota">
-              <table>
-                <tr>
-                  <td>
-                    <h2>Väri:</h2>
-                  </td>
-                  <td>
-                    <input list="colours" name="colour"></input>
-                    <datalist id="colours">
-                      <option value="suoraan tietokannasta" />
-                    </datalist>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div className="input-loota">
-              <table>
-                <tr>
-                  <td>
-                    <h2>Koko:</h2>
-                  </td>
-                  <td>
-                    <input list="sizes" name="size" placeholder="S" />
-                    <datalist id="sizes">
-                      <option value={product?.koko} />
-                    </datalist>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div className="input-loota">
-              <table>
-                <tr>
-                  <td>
-                    <h2>Kpl:</h2>
-                  </td>
-                  <td>
-                    <input
-                      type="number"
-                      min="1"
-                      max="99"
-                      placeholder="0"
-                    ></input>
-                  </td>
-                </tr>
-              </table>
-            </div>
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col className="d-flex justify-content-center">
             <div className="btn_loota">
-              <button>
+              <button onClick={(e) => addToCart(product)}>
                 <h1>OSTOSKORIIN</h1>
-                <h2> kpl, €</h2>
               </button>
             </div>
           </Col>
         </Row>
-      </form>
+      </div>
       <Row>
-        <Col xs={4} md={3}>
+        <Col xs={3} md={3}>
           <div className="duckSvg">
            <img src={Duck} />  
           </div>
         </Col>
-        <Col xs={4} md={6}>
+        <Col xs={6} md={6}>
           <div className="tuotetiedot">
             <h1>Tuotetiedot:</h1>
             <p>{product?.teksti}</p>
           </div>
         </Col>
-        <Col xs={4} md={3}>
+        <Col xs={3} md={3}>
           <div>
            <img className="lippu" src={Lippu} />  
           </div>
