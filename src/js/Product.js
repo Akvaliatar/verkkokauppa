@@ -5,7 +5,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
 import { IoIosArrowForward } from "react-icons/io";
-import Logo from "../img/logo.png";
 import Duck from "../img/duck.svg";
 import Lippu from "../img/avainlippu.png";
 
