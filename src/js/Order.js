@@ -1,6 +1,8 @@
 import { React, useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import "../css/order.css";
+import Logo from "../img/logo.png";
 import { Container, Row, Col } from "react-bootstrap";
 
 export default function Order({url, cart, updateAmount, removeFromCart, emptyCart }) {
@@ -116,6 +118,19 @@ export default function Order({url, cart, updateAmount, removeFromCart, emptyCar
   );
   }
   else {
-    return (<h3>Kiitos tilauksesta</h3>)
+    return (
+    <div>
+      <h3>Kiitos tilauksesta
+        <br/>
+        <img src={Logo} />
+      </h3>
+      <a>
+        <Link
+          to={{pathname: "/"}}>
+          <h3>Klikkaa tästä palataksesi etusivulle.</h3>
+        </Link>
+      </a>
+    </div>
+    )
   }
 }
