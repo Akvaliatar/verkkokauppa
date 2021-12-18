@@ -5,6 +5,8 @@ import Pig from "../img/piggy.jpg";
 import Dogandcat from "../img/dogandcat.jpg";
 import Horseandkid from "../img/horseandkid.jpg";
 import Chikens from "../img/chikens.jpg";
+import Womanandllama from "../img/womanandllama.jpg";
+import Goat from "../img/goat.jpg";
 
 export default function Services() {
   const [showButton, setShowButton] = useState(false);
@@ -185,30 +187,50 @@ export default function Services() {
             </button>
           </div>
         </Col>
-        <Col xs={{ span: 12, order: 2 }} lg={{ span: 6, order: 2 }}>
+        <Col xs={{ span: 12, order: 1 }} lg={{ span: 6, order: 1 }}>
+        <figure className="servicePics">
+            <Image
+              src={Goat}
+              fluid
+              style={{ width: "100%", height: "100%" }}
+            />
+          </figure>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={{ span: 12, order: 2 }} lg={{ span: 6, order: 1 }} >
           <h3>Adoptointiohjelma</h3>
-          <p>
-            Kotieläinpuiston ensimmäisistä hetkistä tärkeimpänä tavoitteena on
-            ollut mahdollistaa koti hylätyille Suomen alueen eläimille oli se
-            vuodeksi tai lopun iäksi, mutta toivomme, että eläimet voisivat myös
-            löytää kodin muualtakin, jotta olisi tilaa akuuteille tapauksille.
-          </p>
-          <p>
-            Reiluuden nimissä adoptointeja ei oteta vastaan, ellei tilalla ole
-            tilaa ja kantokykyä heille. Pyynnöt voi jättää niin sähköpostiin tai
-            sosiaalisen median puolella yksityisviestillä.
-          </p>
-          <p>
-            Otamme vastaan myös mm. koiravaljakoita, jotka jäävät työttömiksi
-            talvisesongin ulkopuolella ja osa voi ansaita ruokansa, jos
-            omistajat kiinnostuvat.
-          </p>
+            <p>
+              Kotieläinpuiston ensimmäisistä hetkistä tärkeimpänä tavoitteena on
+              ollut mahdollistaa koti hylätyille Suomen alueen eläimille oli se
+              vuodeksi tai lopun iäksi, mutta toivomme, että eläimet voisivat myös
+              löytää kodin muualtakin, jotta olisi tilaa akuuteille tapauksille.
+            </p>
+            <p>
+              Reiluuden nimissä adoptointeja ei oteta vastaan, ellei tilalla ole
+              tilaa ja kantokykyä heille. Pyynnöt voi jättää niin sähköpostiin tai
+              sosiaalisen median puolella yksityisviestillä.
+            </p>
+            <p>
+              Otamme vastaan myös mm. koiravaljakoita, jotka jäävät työttömiksi
+              talvisesongin ulkopuolella ja osa voi ansaita ruokansa, jos
+              omistajat kiinnostuvat.
+            </p>
 
-          <div className="buttonToCenter">
-            <button className="seviceButton">
-              <a>LUE LISÄÄ</a>
-            </button>
-          </div>
+            <div className="buttonToCenter">
+              <button className="seviceButton">
+                <a>LUE LISÄÄ</a>
+              </button>
+            </div>
+        </Col>
+        <Col xs={{ span: 12, order: 1 }} lg={{ span: 6, order: 2 }}>
+        <figure className="servicePics">
+            <Image
+              src={Womanandllama}
+              fluid
+              style={{ width: "100%", height: "100%" }}
+            />
+          </figure>
         </Col>
       </Row>
 

@@ -3,6 +3,7 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import Barn from "../img/barn.jpg";
 import Piglets from "../img/piglets.jpg";
 import Goat from "../img/goat.jpg";
+import Sheep from "../img/sheep.jpg";
 import Womanandllama from "../img/womanandllama.jpg";
 
 export default function AboutUs() {
@@ -101,7 +102,7 @@ export default function AboutUs() {
         </Col>
       </Row>
       <Row>
-        <Col xs={{ span: 12, order: 2 }} lg={{ span: 6, order: 1 }}>
+        <Col xs={{ span: 12, order: 1 }} lg={{ span: 6, order: 1 }}>
           <figure className="servicePics">
             <Image
               src={Piglets}
@@ -135,6 +136,15 @@ export default function AboutUs() {
             köyttä yms., voit tulla ilmaiseksi käymään puistossa. Rahalahjoituksia otamme vain silloin, kun
             järjestämme siihen tarkoitettuja myyjäisiä tai tapahtumaa.
           </p>
+        </Col>
+        <Col xs={{ span: 12, order: 1 }} lg={{ span: 6, order: 2 }}>
+        <figure className="servicePics">
+            <Image
+              src={Sheep}
+              fluid
+              style={{ width: "100%", height: "100%" }}
+            />
+          </figure>
         </Col>
       </Row>
 
